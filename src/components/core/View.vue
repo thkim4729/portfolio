@@ -6,7 +6,7 @@
     </div>
 </template>
 
-<script>
+<script defer>
 export default {
     name: 'View',
 };
@@ -16,7 +16,6 @@ export default {
 .view {
     overflow: hidden;
     background: #0a2a43;
-    min-height: 1500px;
 }
 .component-fade-enter-active,
 .component-fade-leave-active {

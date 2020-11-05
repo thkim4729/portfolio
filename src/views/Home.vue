@@ -4,7 +4,7 @@
     </div>
 </template>
 
-<script>
+<script defer>
 // @ is an alias to /src
 export default {
     name: 'Home',

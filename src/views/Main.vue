@@ -8,23 +8,26 @@
             </div>
         </section>
 
-        <about></about>
-        <skill></skill>
-        <sample></sample>
-        <contact></contact>
+        <about class="about"></about>
+        <skills class="skills"></skills>
+        <project class="project"></project>
+        <contact class="contact"></contact>
     </div>
 </template>
 
-<script>
+<script defer>
+import { mapState } from 'vuex';
 export default {
     name: 'Main',
     components: {
         About: () => import('@/components/main/About.vue'),
-        Skill: () => import('@/components/main/Skill.vue'),
-        Sample: () => import('@/components/main/Sample.vue'),
+        Skills: () => import('@/components/main/Skills.vue'),
+        Project: () => import('@/components/main/Project.vue'),
         Contact: () => import('@/components/main/Contact.vue'),
     },
-    computed: {},
+    computed: {
+        ...mapState(['']),
+    },
     data() {
         return {};
     },
