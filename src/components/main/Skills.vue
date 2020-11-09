@@ -1,6 +1,14 @@
 <template>
     <div class="skill">
-        <h1 class="skill-title">SKILLS</h1>
+        <h1
+            class="skill-title"
+            data-aos="fade-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="100"
+            data-aos-offset="0"
+        >
+            SKILLS
+        </h1>
         <v-row class="skill-wrap" no-gutters align="center">
             <section class="right-side">
                 <skills-item></skills-item>
@@ -24,14 +32,14 @@ export default {
 .skill {
     height: 100vh;
     border: 1px solid transparent;
-    background: white;
+    background: #0a2a43;
 }
 .skill-title {
     text-align: center;
     font-size: 4em;
     font-weight: lighter;
     margin: 100px 0;
-    color: #0a2a43;
+    color: white;
 }
 .skill-wrap {
     width: 70%;

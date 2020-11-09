@@ -4,10 +4,17 @@ import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
 import './plugins/axios';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import VueTyperPlugin from 'vue-typer';
 
 Vue.config.productionTip = false;
+Vue.use(VueTyperPlugin);
 
 new Vue({
+    created() {
+        AOS.init();
+    },
     router,
     store,
     vuetify,

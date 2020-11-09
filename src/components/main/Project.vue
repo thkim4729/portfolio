@@ -1,6 +1,14 @@
 <template>
     <div class="project">
-        <h1 class="project-title">PROJECTS</h1>
+        <h1
+            class="project-title"
+            data-aos="fade-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="100"
+            data-aos-offset="0"
+        >
+            PROJECTS
+        </h1>
     </div>
 </template>
 
@@ -13,6 +21,7 @@ export default {
 <style lang="scss" scoped>
 .project {
     height: 100vh;
+    background: white;
     border: 1px solid transparent;
 }
 .project-title {
@@ -20,6 +29,6 @@ export default {
     font-size: 4em;
     font-weight: lighter;
     margin: 100px 0;
-    color: white;
+    color: #0a2a43;
 }
 </style>

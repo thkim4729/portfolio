@@ -1,19 +1,48 @@
 <template>
     <div class="contact">
         <!-- https://rapidapi.com/ -->
-        <h1 class="contact-title">CONTACT</h1>
-        <v-row class="contact-wrap" justify="center" align="center">
+        <h1
+            class="contact-title"
+            data-aos="fade-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="100"
+            data-aos-offset="0"
+        >
+            CONTACT
+        </h1>
+        <v-row
+            class="contact-wrap"
+            justify="center"
+            align="center"
+            data-aos="fade-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="400"
+            data-aos-offset="0"
+        >
             <v-col cols="12">
-                <v-text-field v-model="name" label="Name" outlined hide-details></v-text-field
+                <v-text-field
+                    v-model="name"
+                    placeholder="Name"
+                    solo
+                    outlined
+                    hide-details
+                ></v-text-field
                 ><!--v-model : 데이터를 저장할 변수를 선정, 하단 data에 넣는 것-->
             </v-col>
             <v-col cols="12">
-                <v-text-field v-model="email" label="Email" outlined hide-details></v-text-field>
+                <v-text-field
+                    v-model="email"
+                    placeholder="Email"
+                    solo
+                    outlined
+                    hide-details
+                ></v-text-field>
             </v-col>
             <v-col cols="12">
                 <v-text-field
                     v-model="subject"
-                    label="Subject"
+                    placeholder="Subject"
+                    solo
                     outlined
                     hide-details
                 ></v-text-field>
@@ -21,7 +50,8 @@
             <v-col cols="12">
                 <v-textarea
                     v-model="message"
-                    label="Message"
+                    placeholder="Message"
+                    solo
                     outlined
                     hide-details
                     height="150"
@@ -89,7 +119,7 @@ export default {
 .contact {
     height: 100vh;
     border: 1px solid transparent;
-    background: white;
+    background: #0a2a43;
 }
 .contact-wrap {
     width: 100%;
@@ -109,6 +139,6 @@ export default {
     font-size: 4em;
     font-weight: lighter;
     margin: 100px 0;
-    color: #0a2a43;
+    color: white;
 }
 </style>

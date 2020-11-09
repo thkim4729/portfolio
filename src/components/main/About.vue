@@ -1,8 +1,22 @@
 <template>
     <div class="about">
-        <h1 class="about-title">ABOUT</h1>
+        <h1
+            class="about-title"
+            data-aos="fade-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="100"
+            data-aos-offset="0"
+        >
+            ABOUT
+        </h1>
         <v-row class="about-wrap" no-gutters align="center">
-            <section class="first-side">
+            <section
+                class="first-side"
+                data-aos="fade-right"
+                data-aos-easing="ease-in-ease"
+                data-aos-delay="300"
+                data-aos-offset="0"
+            >
                 <v-avatar size="360">
                     <img
                         src="https://avatars2.githubusercontent.com/u/71238632?s=460&u=b5324c2efbe20a1dc8eedee4ef39a7fbfe58d383&v=4"
@@ -10,7 +24,13 @@
                     />
                 </v-avatar>
             </section>
-            <section class="second-side">
+            <section
+                class="second-side"
+                data-aos="fade-left"
+                data-aos-easing="ease-in-ease"
+                data-aos-delay="500"
+                data-aos-offset="0"
+            >
                 <div class="about-me">
                     <h1>ABOUT ME</h1>
                     <h4>KIM TAEHOON</h4>
@@ -40,12 +60,13 @@ export default {
 .about {
     height: 100vh;
     border: 1px solid transparent;
+    background: white;
 }
 .about-title {
     text-align: center;
     font-size: 4em;
     font-weight: lighter;
-    color: white;
+    color: #0a2a43;
     margin: 100px 0;
 }
 .about-wrap {
@@ -59,18 +80,20 @@ export default {
         h4,
         p,
         a {
-            color: white;
+            color: #0a2a43;
         }
         h1 {
             font-size: 2.25em;
-            font-weight: lighter;
+            font-weight: bold;
             margin: 0 0 5px 0;
         }
         h4 {
-            font-size: 1.25em;
+            font-size: 1.15em;
+            color: #111;
         }
         p {
             font-size: 0.85em;
+            color: #111;
         }
         a:hover {
             text-decoration: underline;

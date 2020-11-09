@@ -3,8 +3,19 @@
         <section class="main-wrap">
             <img src="@/assets/img/bg2.jpg" alt="배경화면" id="bg" />
             <div class="text-box">
-                <h3 class="text1">KIM Taehoon's</h3>
-                <h2 class="text2">Portfolio</h2>
+                <vue-typer
+                    :text="['KIM Taehoon Portfolio']"
+                    :repeat="0"
+                    :shuffle="false"
+                    initial-action="typing"
+                    :pre-type-delay="70"
+                    :type-delay="150"
+                    :pre-erase-delay="2000"
+                    :erase-delay="250"
+                    erase-style="select-all"
+                    :erase-on-complete="false"
+                    caret-animation="phase"
+                ></vue-typer>
             </div>
         </section>
 
@@ -12,6 +23,13 @@
         <skills class="skills"></skills>
         <project class="project"></project>
         <contact class="contact"></contact>
+
+        <div id="top">
+            <v-btn fab dark small color="primary" @click="scrollToTop()">
+                <v-icon>mdi-chevron-up</v-icon>
+            </v-btn>
+        </div>
+        <!--top-->
     </div>
 </template>
 
@@ -31,32 +49,17 @@ export default {
     data() {
         return {};
     },
-    methods: {},
+    methods: {
+        scrollToTop() {
+            window.scrollTo(0, 0);
+        },
+    },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
-.main-wrap:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 75px;
-    background: linear-gradient(to top, #0a2a43, transparent);
-    z-index: 10000;
-}
-.main-wrap:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #0a2a43;
-    z-index: 10000;
-    mix-blend-mode: color;
-}
+
 #bg {
     position: absolute;
     top: 0;
@@ -80,22 +83,35 @@ export default {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) !important;
+    min-width: 500px;
     display: flex;
     justify-content: center;
     flex-flow: column;
     align-items: center;
-    z-index: 1;
-
-    .text1 {
-        color: #fff;
-        font-size: 6em;
-        line-height: 1;
+    text-align: center;
+    z-index: 100;
+    font-size: 72px;
+    font-weight: bold;
+    color: #fff;
+}
+.vue-typer {
+    .custom.char {
+        &.typed {
+            color: #fff;
+        }
     }
-    .text2 {
-        color: #fff;
-        font-size: 8em;
-        line-height: 1.5;
+    .custom.caret {
+        width: 10px;
+        &.typing {
+            background-color: #fff;
+        }
     }
+}
+#top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100000;
 }
 </style>
