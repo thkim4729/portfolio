@@ -14,8 +14,8 @@
             class="contact-wrap"
             justify="center"
             align="center"
-            data-aos="fade-in"
-            data-aos-easing="ease-in-back"
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-ease"
             data-aos-delay="400"
             data-aos-offset="0"
         >
@@ -120,6 +120,7 @@ export default {
     height: 100vh;
     border: 1px solid transparent;
     background: #0a2a43;
+    padding: 0 20px;
 }
 .contact-wrap {
     width: 100%;

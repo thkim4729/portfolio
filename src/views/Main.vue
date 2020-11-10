@@ -2,13 +2,13 @@
     <div class="main">
         <section class="main-wrap">
             <img src="@/assets/img/bg2.jpg" alt="배경화면" id="bg" />
-            <div class="text-box">
+            <div data-aos="fade-in" class="text-box">
                 <vue-typer
                     :text="['KIM Taehoon Portfolio']"
                     :repeat="0"
                     :shuffle="false"
                     initial-action="typing"
-                    :pre-type-delay="70"
+                    :pre-type-delay="1000"
                     :type-delay="150"
                     :pre-erase-delay="2000"
                     :erase-delay="250"
