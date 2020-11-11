@@ -24,14 +24,14 @@
                     />
                 </v-avatar>
             </section>
-            <section
-                class="second-side"
-                data-aos="fade-left"
-                data-aos-easing="ease-in-ease"
-                data-aos-delay="500"
-                data-aos-offset="0"
-            >
-                <div class="about-me">
+            <section class="second-side">
+                <div
+                    data-aos="fade-left"
+                    data-aos-easing="ease-in-ease"
+                    data-aos-delay="400"
+                    data-aos-offset="0"
+                    class="about-me"
+                >
                     <h1>ABOUT ME</h1>
                     <h4>KIM TAEHOON</h4>
                     <p>
@@ -41,7 +41,13 @@
                         thkim4729@naver.com
                     </p>
                 </div>
-                <div class="education">
+                <div
+                    data-aos="fade-left"
+                    data-aos-easing="ease-in-ease"
+                    data-aos-delay="400"
+                    data-aos-offset="0"
+                    class="education"
+                >
                     <h1>EDUCATION</h1>
                     <p>2020. 11 인터렉티브 앱 & 웹디자인(웹퍼블리셔, 프론트엔드) 수료<br /></p>
                 </div>
