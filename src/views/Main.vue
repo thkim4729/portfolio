@@ -24,7 +24,9 @@
         <project class="project"></project>
         <contact class="contact"></contact>
 
-        <div id="top">
+        <div id="guide"></div>
+
+        <div id="top" data-aos="fade-in">
             <v-btn fab dark small color="primary" @click="scrollToTop()">
                 <v-icon>mdi-chevron-up</v-icon>
             </v-btn>
@@ -60,6 +62,15 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
 
+.main-wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #bg {
     position: absolute;
     top: 0;
@@ -69,15 +80,6 @@ export default {
     object-fit: cover;
     pointer-events: none;
     filter: brightness(25%);
-}
-.main-wrap {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .text-box {
     position: absolute;
@@ -103,6 +105,9 @@ export default {
     }
     .custom.caret {
         width: 10px;
+        &.pre-type {
+            background-color: #fff;
+        }
         &.typing {
             background-color: #fff;
         }

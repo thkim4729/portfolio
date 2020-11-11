@@ -14,45 +14,39 @@
             class="contact-wrap"
             justify="center"
             align="center"
-            data-aos="zoom-in"
+            data-aos="flip-left"
             data-aos-easing="ease-in-ease"
-            data-aos-delay="400"
+            data-aos-delay="500"
             data-aos-offset="0"
         >
             <v-col cols="12">
-                <v-text-field
-                    v-model="name"
-                    placeholder="Name"
-                    solo
-                    outlined
-                    hide-details
-                ></v-text-field
+                <v-text-field v-model="name" label="Name" outlined solo hide-details></v-text-field
                 ><!--v-model : 데이터를 저장할 변수를 선정, 하단 data에 넣는 것-->
             </v-col>
             <v-col cols="12">
                 <v-text-field
                     v-model="email"
-                    placeholder="Email"
-                    solo
+                    label="Email"
                     outlined
+                    solo
                     hide-details
                 ></v-text-field>
             </v-col>
             <v-col cols="12">
                 <v-text-field
                     v-model="subject"
-                    placeholder="Subject"
-                    solo
+                    label="Subject"
                     outlined
+                    solo
                     hide-details
                 ></v-text-field>
             </v-col>
             <v-col cols="12">
                 <v-textarea
                     v-model="message"
-                    placeholder="Message"
-                    solo
+                    label="Message"
                     outlined
+                    solo
                     hide-details
                     height="150"
                 ></v-textarea>
@@ -73,43 +67,48 @@ export default {
     },
     methods: {
         requestSendEmail() {
-            let body = {
-                personalizations: [
-                    {
-                        to: [
-                            {
-                                email: 'thkim4729@naver.com',
-                            },
-                        ],
-                        subject: this.subject,
+            let reConfirm = confirm('보내시겠습니까?');
+            if (reConfirm == true) {
+                let body = {
+                    personalizations: [
+                        {
+                            to: [
+                                {
+                                    email: 'thkim4729@naver.com',
+                                },
+                            ],
+                            subject: this.subject,
+                        },
+                    ],
+                    from: {
+                        email: this.email,
                     },
-                ],
-                from: {
-                    email: this.email,
-                },
-                content: [
-                    {
-                        type: 'text/plain',
-                        value: this.message,
-                    },
-                ],
-            };
-            this.$http
-                .post('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', body, {
-                    headers: {
-                        'content-type': 'application/json',
-                        'x-rapidapi-host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
-                        'x-rapidapi-key': sendGrid.key,
-                        accept: 'application/json',
-                        useQueryString: true,
-                    },
-                })
-                .then(function(response) {
-                    console.log(response);
-                })
-                .catch(function(error) {
-                    console.log(error);
-                });
+                    content: [
+                        {
+                            type: 'text/plain',
+                            value: this.message,
+                        },
+                    ],
+                };
+                this.$http
+                    .post('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', body, {
+                        headers: {
+                            'content-type': 'application/json',
+                            'x-rapidapi-host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
+                            'x-rapidapi-key': sendGrid.key,
+                            accept: 'application/json',
+                            useQueryString: true,
+                        },
+                    })
+                    .then(function(response) {
+                        console.log(response);
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                    });
+            } else {
+                undefined;
+            }
         },
     },
 };
