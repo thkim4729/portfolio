@@ -103,7 +103,7 @@ div {
     align-items: center;
     text-align: center;
     z-index: 100;
-    font-size: 72px;
+    font-size: 68px;
     font-weight: bold;
     text-align: center;
     color: #fff;
