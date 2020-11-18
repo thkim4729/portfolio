@@ -66,7 +66,7 @@ export default {
 .about {
     height: 100vh;
     border: 1px solid transparent;
-    background: white;
+    background: #eee;
 }
 .about-title {
     text-align: center;

@@ -32,14 +32,14 @@ export default {
 .skill {
     height: 100vh;
     border: 1px solid transparent;
-    background: #0a2a43;
+    background: #eee;
 }
 .skill-title {
     text-align: center;
     font-size: 4em;
     font-weight: lighter;
     margin: 100px 0;
-    color: white;
+    color: #0a2a43;
 }
 .skill-wrap {
     width: 70%;

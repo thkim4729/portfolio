@@ -14,7 +14,7 @@
             <v-avatar tile size="100"><img :src="skill.img" :alt="skill.alt"/></v-avatar>
             <strong>{{ skill.value }}%</strong>
             <v-col>
-                <v-progress-linear :value="skill.value" color="white" height="7">
+                <v-progress-linear :value="skill.value" color="#0a2a43" height="7">
                 </v-progress-linear>
             </v-col>
         </v-row>
@@ -38,7 +38,7 @@ export default {
     margin-bottom: 48px;
     strong {
         font-size: 20px;
-        color: white;
+        color: #0a2a43;
     }
 }
 .skills-item > div > strong {

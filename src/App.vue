@@ -36,11 +36,12 @@ a {
 
 ::-webkit-scrollbar {
     /* 스크롤바 전체 영역 */
-    width: 8px;
+    width: 6px;
 }
 ::-webkit-scrollbar-track {
     /* 스크롤이 움직이는 영역  */
     background-color: #f9f9f9;
+    border-radius: 30px;
 }
 ::-webkit-scrollbar-thumb {
     /*  스크롤  */

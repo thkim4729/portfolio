@@ -21,8 +21,8 @@ export default {
 <style lang="scss" scoped>
 .project {
     height: 100vh;
-    background: white;
     border: 1px solid transparent;
+    background: #eee;
 }
 .project-title {
     text-align: center;

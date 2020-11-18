@@ -9,7 +9,7 @@
         <div id="guide"></div>
 
         <div id="top" data-aos="fade-in">
-            <v-btn fab dark small color="primary" @click="scrollToTop()">
+            <v-btn fab dark color="dark" @click="scrollToTop()">
                 <v-icon>mdi-chevron-up</v-icon>
             </v-btn>
         </div>
@@ -44,7 +44,11 @@ export default {
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
-
+.main {
+    background: url('../assets/img/bg2.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
 #top {
     position: fixed;
     bottom: 30px;

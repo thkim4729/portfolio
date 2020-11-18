@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <v-footer absolute class="font-weight-medium" color="#0a2a43" dark>
+        <v-footer absolute class="font-weight-medium" dark>
             <v-col class="text-center" cols="12">
                 <strong>KIM Taehoon Portfolio — {{ formatDate }}</strong>
                 <p>

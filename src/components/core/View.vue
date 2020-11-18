@@ -15,7 +15,6 @@ export default {
 <style lang="scss" scoped>
 .view {
     overflow: hidden;
-    background: #0a2a43;
 }
 .component-fade-enter-active,
 .component-fade-leave-active {
