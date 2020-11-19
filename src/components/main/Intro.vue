@@ -16,7 +16,7 @@
                     caret-animation="phase"
                 ></vue-typer>
             </div>
-            <div
+            <!-- <div
                 class="rellax d1"
                 ref="rellax"
                 v-rellax="{
@@ -51,7 +51,7 @@
                 }"
             >
                 <img src="@/assets/img/keycap04.png" />
-            </div>
+            </div> -->
         </section>
     </div>
 </template>
@@ -96,7 +96,7 @@ div {
     left: 50%;
     transform: translate(-50%, -50%) !important;
     max-width: 100%;
-    min-width: 500px;
+    min-width: 450px;
     display: flex;
     justify-content: center;
     flex-flow: column;

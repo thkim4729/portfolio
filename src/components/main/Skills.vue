@@ -9,12 +9,7 @@
         >
             SKILLS
         </h1>
-        <v-row class="skill-wrap" no-gutters align="center">
-            <section class="right-side">
-                <skills-item></skills-item>
-            </section>
-            <section class="left-side"></section>
-        </v-row>
+        <skills-item></skills-item>
     </div>
 </template>
 
@@ -40,12 +35,6 @@ export default {
     font-weight: lighter;
     margin: 100px 0;
     color: #0a2a43;
-}
-.skill-wrap {
-    width: 70%;
-    margin: 0 auto;
-    flex-flow: wrap-reverse;
-    align-content: center;
 }
 .skill-wrap > section {
     width: 48%;

@@ -7,11 +7,9 @@ import './plugins/axios';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import VueTyperPlugin from 'vue-typer';
-import VueRellax from 'vue-rellax';
 
 Vue.config.productionTip = false;
 Vue.use(VueTyperPlugin);
-Vue.use(VueRellax);
 
 new Vue({
     created() {
