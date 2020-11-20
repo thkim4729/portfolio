@@ -1,68 +1,102 @@
 <template>
-    <v-row class="skills-item" no-gutters justify="center" align="center">
-        <v-row
-            class="skills-item-wrap"
-            justify="center"
-            align="center"
-            v-for="(skill, i) in Skills"
-            :key="i"
-            data-aos="fade-right"
-            data-aos-easing="ease-in-ease"
-            data-aos-delay="400"
-            data-aos-offset="0"
-        >
-            <!-- <v-avatar tile size="100"><img :src="skill.img" :alt="skill.alt"/></v-avatar>
-            <strong>{{ skill.value }}%</strong>
-            <v-col>
-                <v-progress-linear :value="skill.value" color="#0a2a43" height="7">
-                </v-progress-linear>
-            </v-col> -->
-            <div class="img-wrap"><img :src="skill.img" :alt="skill.alt" /></div>
-            <Progress :radius="50" :strokeWidth="10" :value="skill.value" class="progress">
-                <template v-slot:footer></template>
-            </Progress>
+    <v-row class="skills-item" no-gutters justify="center">
+        <v-row class="skills-item-wrap" justify="center" align="center">
+            <v-col
+                class="skills-item-element"
+                cols="12"
+                lg="3"
+                md="6"
+                v-for="(skill, i) in Skills"
+                :key="i"
+                data-aos="fade-in"
+                data-aos-easing="ease-in-ease"
+                data-aos-delay="500"
+                data-aos-offset="0"
+            >
+                <!-- <div class="img-wrap"><img :src="skill.img" :alt="skill.name" /></div> -->
+                <vue-ellipse-progress
+                    :data="circles"
+                    :progress="skill.value + '%'"
+                    :angle="-90"
+                    :size="250"
+                    :thickness="7.5"
+                    :emptyThickness="4"
+                    :color="gradient"
+                    emptyColor="#eee"
+                    fontSize="2rem"
+                >
+                    <p slot="legend-caption" class="progress_title">
+                        <img :src="skill.img" :alt="skill.name" />
+                    </p>
+                </vue-ellipse-progress>
+            </v-col>
         </v-row>
     </v-row>
 </template>
 
 <script defer>
-import Progress from 'easy-circular-progress';
 import { mapState } from 'vuex';
 export default {
     name: 'SkillsItem',
     computed: {
         ...mapState(['Skills']),
     },
-    components: {
-        Progress,
+    date() {
+        return {
+            gradient: {
+                radial: false,
+                colors: [
+                    {
+                        color: '#1976D2',
+                        offset: '0',
+                        opacity: '1',
+                    },
+                    {
+                        color: 'lime',
+                        offset: '100',
+                        opacity: '0.6',
+                    },
+                ],
+            },
+        };
     },
+    components: {},
     props: {},
 };
 </script>
 
 <style lang="scss" scoped>
 .skills-item {
-    width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 .skills-item-wrap {
     flex-flow: row wrap;
-    margin-bottom: 48px;
+    // height: 100%;
+    // margin: 100px 0 100px 0;
+    margin: auto auto;
     strong {
         font-size: 20px;
         color: #0a2a43;
     }
 }
-.progress {
-    text-align: center;
-    color: black;
+.skills-item-element {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+.progress_title {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 24px;
+    img {
+        width: 120px;
+    }
 }
 .img-wrap {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
+    // margin-right: 50px;
     img {
         width: 100%;
     }

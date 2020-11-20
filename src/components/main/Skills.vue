@@ -1,40 +1,45 @@
 <template>
-    <div class="skill">
-        <h1
-            class="skill-title"
-            data-aos="fade-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="100"
-            data-aos-offset="0"
-        >
-            SKILLS
-        </h1>
+    <v-parallax class="skill" :height="isMobile" :src="img">
         <skills-item></skills-item>
-    </div>
+    </v-parallax>
 </template>
 
 <script defer>
 export default {
     name: 'Skill',
     data() {
-        return {};
+        return {
+            isMobile: 600,
+            img: require('@/assets/img/bg4.jpg'),
+        };
     },
     components: { SkillsItem: () => import('@/components/main/SkillsItem.vue') },
+    mounted() {
+        let onresize = () => {
+            let width = document.body.clientWidth;
+            // console.log(width);
+            if (width < 600) {
+                this.isMobile = 1200;
+            } else if (width < 1264) {
+                this.isMobile = 700;
+            } else {
+                this.isMobile = 600;
+            }
+        };
+        window.addEventListener('resize', onresize);
+    },
 };
 </script>
 
 <style lang="scss" scoped>
 .skill {
-    height: 100vh;
     border: 1px solid transparent;
-    background: #eee;
 }
 .skill-title {
     text-align: center;
     font-size: 4em;
     font-weight: lighter;
-    margin: 100px 0;
-    color: #0a2a43;
+    color: #eee;
 }
 .skill-wrap > section {
     width: 48%;

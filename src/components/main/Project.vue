@@ -9,12 +9,14 @@
         >
             PROJECTS
         </h1>
+        <project-item></project-item>
     </div>
 </template>
 
 <script defer>
 export default {
     name: 'Project',
+    components: { ProjectItem: () => import('@/components/main/ProjectItem.vue') },
 };
 </script>
 
@@ -23,12 +25,13 @@ export default {
     height: 100vh;
     border: 1px solid transparent;
     background: #eee;
+    overflow: hidden;
 }
 .project-title {
     text-align: center;
     font-size: 4em;
     font-weight: lighter;
-    margin: 100px 0;
+    margin: 80px 0;
     color: #0a2a43;
 }
 </style>

@@ -73,7 +73,7 @@ export default {
     font-size: 4em;
     font-weight: lighter;
     color: #0a2a43;
-    margin: 100px 0;
+    margin: 80px 0;
 }
 .about-wrap {
     width: 70%;

@@ -8,29 +8,27 @@ export default new Vuex.Store({
         Skills: [
             {
                 id: 0,
-                img:
-                    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png',
+                img: require('@/assets/img/HTML.png'),
                 value: '60',
-                alt: 'html',
+                name: 'HTML',
             },
             {
                 id: 1,
-                img: 'https://louis-grange.github.io/Portfolio/images/Logo/CSS.png',
-                value: '50',
-                alt: 'css',
+                img: require('@/assets/img/CSS.png'),
+                value: '60',
+                name: 'CSS',
             },
             {
                 id: 2,
-                img:
-                    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png',
-                value: '40',
-                alt: 'javascript',
+                img: require('@/assets/img/JS.png'),
+                value: '50',
+                name: 'JavaScript',
             },
             {
                 id: 3,
-                img: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png',
-                value: '30',
-                alt: 'vue',
+                img: require('@/assets/img/Vue.png'),
+                value: '50',
+                name: 'Vue.js',
             },
         ],
     },

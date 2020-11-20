@@ -9,7 +9,7 @@
         <div id="guide"></div>
 
         <div id="top" data-aos="fade-in">
-            <v-btn fab dark color="dark" @click="scrollToTop()">
+            <v-btn fab dark color="primary" @click="scrollToTop()">
                 <v-icon>mdi-chevron-up</v-icon>
             </v-btn>
         </div>

@@ -20,30 +20,17 @@
             data-aos-offset="0"
         >
             <v-col cols="12">
-                <v-text-field
-                    v-model="name"
-                    placeholder="Name"
-                    solo
-                    dark
-                    hide-details
-                ></v-text-field
+                <v-text-field v-model="name" placeholder="Name" solo hide-details></v-text-field
                 ><!--v-model : 데이터를 저장할 변수를 선정, 하단 data에 넣는 것-->
             </v-col>
             <v-col cols="12">
-                <v-text-field
-                    v-model="email"
-                    placeholder="Email"
-                    solo
-                    dark
-                    hide-details
-                ></v-text-field>
+                <v-text-field v-model="email" placeholder="Email" solo hide-details></v-text-field>
             </v-col>
             <v-col cols="12">
                 <v-text-field
                     v-model="subject"
                     placeholder="Subject"
                     solo
-                    dark
                     hide-details
                 ></v-text-field>
             </v-col>
@@ -53,14 +40,13 @@
                         v-model="message"
                         placeholder="Message"
                         solo
-                        dark
                         hide-details
                         height="200"
                     ></v-textarea>
                 </div>
             </v-col>
             <v-row class="contactme_button" justify="center">
-                <v-btn large color="dark" dark @click="requestSendEmail">SUBMIT</v-btn>
+                <v-btn large color="primary" dark @click="requestSendEmail">SUBMIT</v-btn>
             </v-row>
         </v-row>
     </div>
@@ -127,7 +113,7 @@ export default {
     height: 100vh;
     border: 1px solid transparent;
     padding: 0 20px;
-    background: #eee;
+    background: #0a2a43;
 }
 .contact-wrap {
     width: 100%;
@@ -146,8 +132,8 @@ export default {
     text-align: center;
     font-size: 4em;
     font-weight: lighter;
-    margin: 100px 0;
-    color: #0a2a43;
+    margin: 80px 0;
+    color: #eee;
 }
 .scroll-view {
     max-height: 200px;
