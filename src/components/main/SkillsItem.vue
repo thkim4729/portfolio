@@ -61,7 +61,7 @@ export default {
             if (this.$refs.fade.offsetTop < scrollTop && !this.isElAppear) {
                 this.isElAppear = true;
                 let interval = setInterval(() => {
-                    if (this.timeing > 5) {
+                    if (this.timing > 5) {
                         clearInterval(interval);
                     }
                     this.timeing++;

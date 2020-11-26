@@ -1,6 +1,6 @@
 <template>
     <v-parallax class="skill" :height="isMobile" :src="img">
-        <skills-item></skills-item>
+        <skills-item ref="fade"></skills-item>
     </v-parallax>
 </template>
 
@@ -27,6 +27,10 @@ export default {
             }
         };
         window.addEventListener('resize', onresize);
+
+        document.addEventListener('scroll', () => {
+            this.$refs.fade.scrollCallbackElAppear(window.scrollY);
+        });
     },
 };
 </script>
