@@ -27,7 +27,7 @@ export default {
 <style lang="scss" scoped>
 .item-box {
     width: 50%;
-    height: 500px;
+    max-height: 500px;
     position: relative;
     overflow: hidden;
     img {
