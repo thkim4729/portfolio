@@ -19,7 +19,6 @@
             data-aos-delay="500"
             data-aos-offset="0"
         >
-            <!-- <div class="left"> -->
             <v-col cols="12">
                 <v-text-field v-model="name" placeholder="Name" solo hide-details></v-text-field
                 ><!--v-model : 데이터를 저장할 변수를 선정, 하단 data에 넣는 것-->
@@ -49,64 +48,62 @@
             <v-row class="contactme_button" justify="center">
                 <v-btn large color="primary" dark @click="requestSendEmail">SUBMIT</v-btn>
             </v-row>
-            <!-- </div> -->
-            <!-- <div class="right"></div> -->
         </v-row>
     </div>
 </template>
 
 <script defer>
-import sendGrid from '@/config/sendGrid.json';
+// import sendGrid from '@/config/sendGrid.json';
 export default {
     name: 'Contact',
     data() {
         return { name: '', email: '', subject: '', message: '' };
     },
     methods: {
-        requestSendEmail() {
-            let reConfirm = confirm('보내시겠습니까?');
-            if (reConfirm == true) {
-                let body = {
-                    personalizations: [
-                        {
-                            to: [
-                                {
-                                    email: 'thkim4729@naver.com',
-                                },
-                            ],
-                            subject: this.subject,
-                        },
-                    ],
-                    from: {
-                        email: this.email,
-                    },
-                    content: [
-                        {
-                            type: 'text/plain',
-                            value: this.message,
-                        },
-                    ],
-                };
-                this.$http
-                    .post('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', body, {
-                        headers: {
-                            'content-type': 'application/json',
-                            'x-rapidapi-host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
-                            'x-rapidapi-key': sendGrid.key,
-                            accept: 'application/json',
-                            useQueryString: true,
-                        },
-                    })
-                    .then(function(response) {
-                        console.log(response);
-                    })
-                    .catch(function(error) {
-                        console.log(error);
-                    });
-            } else {
-                undefined;
-            }
-        },
+        // requestSendEmail() {
+        //     let reConfirm = confirm('보내시겠습니까?');
+        //     if (reConfirm == true) {
+        //         let body = {
+        //             personalizations: [
+        //                 {
+        //                     to: [
+        //                         {
+        //                             email: 'thkim4729@naver.com',
+        //                         },
+        //                     ],
+        //                     subject: this.subject,
+        //                 },
+        //             ],
+        //             from: {
+        //                 email: this.email,
+        //             },
+        //             content: [
+        //                 {
+        //                     type: 'text/plain',
+        //                     value: this.message,
+        //                 },
+        //             ],
+        //         };
+        //         this.$http
+        //             .post('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', body, {
+        //                 headers: {
+        //                     'content-type': 'application/json',
+        //                     'x-rapidapi-host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
+        //                     'x-rapidapi-key': sendGrid.key,
+        //                     accept: 'application/json',
+        //                     useQueryString: true,
+        //                 },
+        //             })
+        //             .then(function(response) {
+        //                 console.log(response);
+        //             })
+        //             .catch(function(error) {
+        //                 console.log(error);
+        //             });
+        //     } else {
+        //         undefined;
+        //     }
+        // },
     },
 };
 </script>

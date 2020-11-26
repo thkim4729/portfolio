@@ -3,11 +3,9 @@
         <v-footer absolute class="font-weight-medium footer" dark>
             <v-col class="text-center" cols="12">
                 <strong>KIM Taehoon Portfolio — {{ formatDate }}</strong>
-                <p>
-                    <a href="https://github.com/thkim4729" target="_blank">
-                        <v-icon>mdi-github</v-icon>
-                    </a>
-                </p>
+                <a href="https://github.com/thkim4729" target="_blank">
+                    <v-icon>mdi-github</v-icon>
+                </a>
             </v-col>
         </v-footer>
     </div>
@@ -36,5 +34,8 @@ export default {
     flex-flow: row;
     justify-content: center;
     align-items: center;
+    strong {
+        margin-right: 16px;
+    }
 }
 </style>
