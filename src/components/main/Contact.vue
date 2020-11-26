@@ -19,6 +19,7 @@
             data-aos-delay="500"
             data-aos-offset="0"
         >
+            <!-- <div class="left"> -->
             <v-col cols="12">
                 <v-text-field v-model="name" placeholder="Name" solo hide-details></v-text-field
                 ><!--v-model : 데이터를 저장할 변수를 선정, 하단 data에 넣는 것-->
@@ -48,6 +49,8 @@
             <v-row class="contactme_button" justify="center">
                 <v-btn large color="primary" dark @click="requestSendEmail">SUBMIT</v-btn>
             </v-row>
+            <!-- </div> -->
+            <!-- <div class="right"></div> -->
         </v-row>
     </div>
 </template>
@@ -113,7 +116,9 @@ export default {
     height: 100vh;
     border: 1px solid transparent;
     padding: 0 20px;
-    background: #0a2a43;
+    // background: url('https://miro.medium.com/max/10494/1*zMQQf10DS-hQIB6p07_kag.jpeg');
+    background-position: center;
+    background-size: cover;
 }
 .contact-wrap {
     width: 100%;
@@ -121,6 +126,10 @@ export default {
     margin: 0 auto;
     flex-flow: column;
     align-content: center;
+    // .left,
+    // .right {
+    //     width: 50%;
+    // }
 }
 .contact-wrap > div {
     padding: 0 0 16px 0;
@@ -133,7 +142,7 @@ export default {
     font-size: 4em;
     font-weight: lighter;
     margin: 80px 0;
-    color: #eee;
+    color: #0a2a43;
 }
 .scroll-view {
     max-height: 200px;

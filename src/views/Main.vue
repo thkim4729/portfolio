@@ -45,8 +45,8 @@ export default {
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
 .main {
-    background: url('../assets/img/bg2.jpg');
-    background-size: 100% 100%;
+    background: url('../assets/img/bg5.jpg');
+    background-size: cover;
     background-attachment: fixed;
 }
 #top {

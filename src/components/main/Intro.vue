@@ -16,42 +16,6 @@
                     caret-animation="phase"
                 ></vue-typer>
             </div>
-            <!-- <div
-                class="rellax d1"
-                ref="rellax"
-                v-rellax="{
-                    speed: 5,
-                }"
-            >
-                <img src="@/assets/img/keycap01.png" />
-            </div>
-            <div
-                class="rellax d2"
-                ref="rellax"
-                v-rellax="{
-                    speed: 4,
-                }"
-            >
-                <img src="@/assets/img/keycap02.png" />
-            </div>
-            <div
-                class="rellax d3"
-                ref="rellax"
-                v-rellax="{
-                    speed: 0,
-                }"
-            >
-                <img src="@/assets/img/keycap03.png" />
-            </div>
-            <div
-                class="rellax d4"
-                ref="rellax"
-                v-rellax="{
-                    speed: 3,
-                }"
-            >
-                <img src="@/assets/img/keycap04.png" />
-            </div> -->
         </section>
     </div>
 </template>
@@ -106,50 +70,22 @@ div {
     font-size: 68px;
     font-weight: bold;
     text-align: center;
-    color: #fff;
+    color: #0a2a43;
 }
 .vue-typer {
     .custom.char {
         &.typed {
-            color: #fff;
+            color: #0a2a43;
         }
     }
     .custom.caret {
         width: 10px;
         &.pre-type {
-            background-color: #fff;
+            background-color: #0a2a43;
         }
         &.typing {
-            background-color: #fff;
+            background-color: #0a2a43;
         }
-    }
-}
-.d1 {
-    width: 200px;
-    margin: 0 0 500px -200px;
-    img {
-        width: 100%;
-    }
-}
-.d2 {
-    width: 300px;
-    margin: 500px 0 0 0;
-    img {
-        width: 100%;
-    }
-}
-.d3 {
-    width: 300px;
-    margin: 0 0 600px 0;
-    img {
-        width: 100%;
-    }
-}
-.d4 {
-    width: 300px;
-    margin: 0 -300px 0 300px;
-    img {
-        width: 100%;
     }
 }
 </style>

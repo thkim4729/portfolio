@@ -1,5 +1,5 @@
 <template>
-    <v-row class="skills-item" no-gutters justify="center">
+    <v-row class="skills-item" no-gutters justify="center" refs="fade">
         <v-row class="skills-item-wrap" justify="center" align="center">
             <v-col
                 class="skills-item-element"
@@ -8,10 +8,6 @@
                 md="6"
                 v-for="(skill, i) in Skills"
                 :key="i"
-                data-aos="fade-in"
-                data-aos-easing="ease-in-ease"
-                data-aos-delay="500"
-                data-aos-offset="0"
             >
                 <!-- <div class="img-wrap"><img :src="skill.img" :alt="skill.name" /></div> -->
                 <vue-ellipse-progress
@@ -59,6 +55,19 @@ export default {
                 ],
             },
         };
+    },
+    methods: {
+        scrollCallbackElAppear(scrollTop) {
+            if (this.$refs.fade.offsetTop < scrollTop && !this.isElAppear) {
+                this.isElAppear = true;
+                let interval = setInterval(() => {
+                    if (this.timeing > 5) {
+                        clearInterval(interval);
+                    }
+                    this.timeing++;
+                }, 200);
+            }
+        },
     },
     components: {},
     props: {},

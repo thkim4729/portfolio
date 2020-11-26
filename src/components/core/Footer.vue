@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <v-footer absolute class="font-weight-medium" dark>
+        <v-footer absolute class="font-weight-medium footer" dark>
             <v-col class="text-center" cols="12">
                 <strong>KIM Taehoon Portfolio — {{ formatDate }}</strong>
                 <p>
@@ -28,9 +28,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.footer {
+    height: 80px;
+}
 .text-center {
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     justify-content: center;
     align-items: center;
 }

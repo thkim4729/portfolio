@@ -22,7 +22,6 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-    height: 100vh;
     border: 1px solid transparent;
     background: #eee;
     overflow: hidden;
