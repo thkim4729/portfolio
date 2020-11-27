@@ -40,12 +40,12 @@ a {
 }
 ::-webkit-scrollbar-track {
     /* 스크롤이 움직이는 영역  */
-    background-color: #f9f9f9;
+    background-color: #eee;
     border-radius: 30px;
 }
 ::-webkit-scrollbar-thumb {
     /*  스크롤  */
-    background-color: #aaa;
+    background-color: #bbb;
     border-radius: 30px;
 }
 ::-webkit-scrollbar-button:start:decrement,

@@ -7,11 +7,12 @@ import './plugins/axios';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import VueTyperPlugin from 'vue-typer';
-import VueEllipseProgress from 'vue-ellipse-progress';
+import VueGlide from 'vue-glide-js';
+import 'vue-glide-js/dist/vue-glide.css';
 
 Vue.config.productionTip = false;
 Vue.use(VueTyperPlugin);
-Vue.use(VueEllipseProgress);
+Vue.use(VueGlide);
 
 new Vue({
     created() {

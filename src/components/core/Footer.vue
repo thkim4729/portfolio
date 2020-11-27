@@ -1,10 +1,10 @@
 <template>
     <div class="footer">
-        <v-footer absolute class="font-weight-medium footer" dark>
+        <v-footer absolute class="font-weight-medium footer" color="#132448">
             <v-col class="text-center" cols="12">
                 <strong>KIM Taehoon Portfolio — {{ formatDate }}</strong>
-                <a href="https://github.com/thkim4729" target="_blank">
-                    <v-icon>mdi-github</v-icon>
+                <a class="github" href="https://github.com/thkim4729" target="_blank">
+                    <v-icon dark>mdi-github</v-icon>
                 </a>
             </v-col>
         </v-footer>
@@ -36,6 +36,12 @@ export default {
     align-items: center;
     strong {
         margin-right: 16px;
+    }
+    .github {
+        filter: brightness(80%);
+    }
+    .github:hover {
+        filter: none;
     }
 }
 </style>

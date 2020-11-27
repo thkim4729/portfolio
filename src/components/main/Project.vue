@@ -1,5 +1,5 @@
 <template>
-    <div class="project">
+    <div id="project">
         <h1
             class="project-title"
             data-aos="fade-in"
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.project {
+#project {
     border: 1px solid transparent;
     background: #eee;
     overflow: hidden;
@@ -31,6 +31,6 @@ export default {
     font-size: 4em;
     font-weight: lighter;
     margin: 80px 0;
-    color: #0a2a43;
+    color: #132448;
 }
 </style>

@@ -1,15 +1,15 @@
 <template>
     <div class="main">
-        <intro class="intro"></intro>
-        <about class="about"></about>
-        <skills class="skills"></skills>
-        <project class="project"></project>
-        <contact class="contact"></contact>
+        <intro id="intro" class="intro"></intro>
+        <about id="about" class="about" ref="about"></about>
+        <skill id="skill" class="skill"></skill>
+        <project id="project" class="project"></project>
+        <contact id="contact" class="contact"></contact>
 
         <div id="guide"></div>
 
         <div id="top" data-aos="fade-in">
-            <v-btn fab dark color="primary" @click="scrollToTop()">
+            <v-btn small fab dark color="#132448" @click="scrollToTop()">
                 <v-icon>mdi-chevron-up</v-icon>
             </v-btn>
         </div>
@@ -24,7 +24,7 @@ export default {
     components: {
         Intro: () => import('@/components/main/Intro.vue'),
         About: () => import('@/components/main/About.vue'),
-        Skills: () => import('@/components/main/Skills.vue'),
+        Skill: () => import('@/components/main/Skill.vue'),
         Project: () => import('@/components/main/Project.vue'),
         Contact: () => import('@/components/main/Contact.vue'),
     },
@@ -51,8 +51,8 @@ export default {
 }
 #top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 25px;
+    right: 25px;
     z-index: 100000;
 }
 </style>

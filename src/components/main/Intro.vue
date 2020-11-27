@@ -1,5 +1,5 @@
 <template>
-    <div class="intro">
+    <div id="intro">
         <section class="intro-wrap">
             <div data-aos="fade-in" class="text-box">
                 <vue-typer
@@ -43,6 +43,7 @@ div {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 4;
 }
 #bg {
     position: absolute;
@@ -70,21 +71,21 @@ div {
     font-size: 68px;
     font-weight: bold;
     text-align: center;
-    color: #0a2a43;
+    color: #132448;
 }
 .vue-typer {
     .custom.char {
         &.typed {
-            color: #0a2a43;
+            color: #132448;
         }
     }
     .custom.caret {
         width: 10px;
         &.pre-type {
-            background-color: #0a2a43;
+            background-color: #132448;
         }
         &.typing {
-            background-color: #0a2a43;
+            background-color: #132448;
         }
     }
 }

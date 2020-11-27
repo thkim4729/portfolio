@@ -1,10 +1,10 @@
 <template>
-    <div class="about">
+    <div id="about">
         <h1
             class="about-title"
             data-aos="fade-in"
             data-aos-easing="ease-in-back"
-            data-aos-delay="100"
+            data-aos-delay="0"
             data-aos-offset="0"
         >
             ABOUT
@@ -14,7 +14,7 @@
                 class="first-side"
                 data-aos="fade-right"
                 data-aos-easing="ease-in-ease"
-                data-aos-delay="300"
+                data-aos-delay="200"
                 data-aos-offset="0"
             >
                 <v-avatar size="360">
@@ -28,7 +28,7 @@
                 <div
                     data-aos="fade-left"
                     data-aos-easing="ease-in-ease"
-                    data-aos-delay="400"
+                    data-aos-delay="300"
                     data-aos-offset="0"
                     class="about-me"
                 >
@@ -44,7 +44,7 @@
                 <div
                     data-aos="fade-left"
                     data-aos-easing="ease-in-ease"
-                    data-aos-delay="400"
+                    data-aos-delay="300"
                     data-aos-offset="0"
                     class="education"
                 >
@@ -59,11 +59,18 @@
 <script defer>
 export default {
     name: 'About',
+    mounted() {
+        let aboutEl = document.getElementById('about');
+        let aboutElY = aboutEl.getBoundingClientRect().top;
+        console.log(aboutElY);
+        let result = window.pageYOffset + aboutEl.getBoundingClientRect().top;
+        console.log(result);
+    },
 };
 </script>
 
 <style lang="scss" scoped>
-.about {
+#about {
     height: 100vh;
     border: 1px solid transparent;
     background: #eee;
@@ -72,7 +79,7 @@ export default {
     text-align: center;
     font-size: 4em;
     font-weight: lighter;
-    color: #0a2a43;
+    color: #132448;
     margin: 80px 0;
 }
 .about-wrap {
@@ -86,7 +93,7 @@ export default {
         h4,
         p,
         a {
-            color: #0a2a43;
+            color: #132448;
         }
         h1 {
             font-size: 2.25em;
