@@ -49,7 +49,19 @@
                     class="education"
                 >
                     <h1>EDUCATION</h1>
-                    <p>2020. 11 인터렉티브 앱 & 웹디자인(웹퍼블리셔, 프론트엔드) 수료<br /></p>
+                    <p>2020. 11 인터렉티브 앱 & 웹디자인(웹퍼블리셔, 프론트엔드)과정 수료<br /></p>
+                </div>
+                <div
+                    data-aos="fade-left"
+                    data-aos-easing="ease-in-ease"
+                    data-aos-delay="300"
+                    data-aos-offset="0"
+                    class="education"
+                >
+                    <h1>AWARD</h1>
+                    <p>
+                        2020. 11 인터렉티브 앱 & 웹디자인(웹퍼블리셔, 프론트엔드)과정 우수상<br />
+                    </p>
                 </div>
             </section>
         </v-row>
