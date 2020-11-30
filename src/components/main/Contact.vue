@@ -23,7 +23,7 @@
     </div>
 </template>
 
-<script defer>
+<script>
 // import sendGrid from '@/config/sendGrid.json';
 export default {
     name: 'Contact',

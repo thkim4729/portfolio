@@ -4,7 +4,7 @@
     </v-app>
 </template>
 
-<script defer>
+<script>
 export default {
     name: 'App',
     components: {},
@@ -14,7 +14,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
 @font-face {
     font-family: 'NEXON Lv1 Gothic OTF Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff')
@@ -34,28 +34,28 @@ a {
     font-family: 'NEXON Lv1 Gothic Light', sans-serif;
 }
 
-::-webkit-scrollbar {
-    /* 스크롤바 전체 영역 */
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    /* 스크롤이 움직이는 영역  */
-    background-color: #eee;
-    border-radius: 30px;
-}
-::-webkit-scrollbar-thumb {
-    /*  스크롤  */
-    background-color: #bbb;
-    border-radius: 30px;
-}
-::-webkit-scrollbar-button:start:decrement,
-::-webkit-scrollbar-button:end:increment {
-    /*  스크롤의 화살표가 포함된 영역   */
-    // display: block;
-    // height: 10px;
-    // background-color: gray;
-}
-::-webkit-scrollbar-corner {
-    /*  상하+좌우 스크롤이 만나는 공간   */
-}
+// ::-webkit-scrollbar {
+//     /* 스크롤바 전체 영역 */
+//     width: 6px;
+// }
+// ::-webkit-scrollbar-track {
+//     /* 스크롤이 움직이는 영역  */
+//     background-color: #eee;
+//     border-radius: 30px;
+// }
+// ::-webkit-scrollbar-thumb {
+//     /*  스크롤  */
+//     background-color: #bbb;
+//     border-radius: 30px;
+// }
+// ::-webkit-scrollbar-button:start:decrement,
+// ::-webkit-scrollbar-button:end:increment {
+//     /*  스크롤의 화살표가 포함된 영역   */
+//     // display: block;
+//     // height: 10px;
+//     // background-color: gray;
+// }
+// ::-webkit-scrollbar-corner {
+//     /*  상하+좌우 스크롤이 만나는 공간   */
+// }
 </style>

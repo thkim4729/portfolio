@@ -5,13 +5,13 @@
                 <vue-glide
                     class="slide-wrap"
                     autoplay
-                    perView="2"
-                    animationDuration="2500"
-                    gap="50"
+                    :perView="perView"
+                    :animationDuration="animationDuration"
+                    :gap="gap"
                     rewind
-                    rewindDuration="2500"
+                    :rewindDuration="rewindDuration"
                     bound
-                    hoverpause="true"
+                    :hoverpause="hoverpause"
                 >
                     <vue-glide-slide class="slide-item" v-for="(skill, i) in skills" :key="i">
                         <img class="slide-img" :src="skill.img" :alt="skill.name" />
@@ -32,7 +32,7 @@
     </v-row>
 </template>
 
-<script defer>
+<script>
 import { Glide, GlideSlide } from 'vue-glide-js';
 import { mapState } from 'vuex';
 export default {
@@ -42,7 +42,13 @@ export default {
         [GlideSlide.name]: GlideSlide,
     },
     data() {
-        return {};
+        return {
+            perView: 2,
+            gap: 50,
+            hoverpause: true,
+            animationDuration: 2500,
+            rewindDuration: 2500,
+        };
     },
     computed: {
         ...mapState(['skills']),

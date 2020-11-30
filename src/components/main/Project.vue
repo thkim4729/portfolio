@@ -13,7 +13,7 @@
     </div>
 </template>
 
-<script defer>
+<script>
 export default {
     name: 'Project',
     components: { ProjectItem: () => import('@/components/main/ProjectItem.vue') },

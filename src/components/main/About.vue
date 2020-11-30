@@ -68,7 +68,7 @@
     </div>
 </template>
 
-<script defer>
+<script>
 export default {
     name: 'About',
     mounted() {
