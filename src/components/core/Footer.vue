@@ -3,9 +3,6 @@
         <v-footer absolute class="font-weight-medium footer" color="#132448">
             <v-col class="text-center" cols="12">
                 <strong>KIM Taehoon Portfolio — {{ formatDate }}</strong>
-                <a class="github" href="https://github.com/thkim4729" target="_blank">
-                    <v-icon dark>mdi-github</v-icon>
-                </a>
             </v-col>
         </v-footer>
     </div>

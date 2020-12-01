@@ -71,13 +71,6 @@
 <script>
 export default {
     name: 'About',
-    mounted() {
-        let aboutEl = document.getElementById('about');
-        let aboutElY = aboutEl.getBoundingClientRect().top;
-        console.log(aboutElY);
-        let result = window.pageYOffset + aboutEl.getBoundingClientRect().top;
-        console.log(result);
-    },
 };
 </script>
 
@@ -92,7 +85,7 @@ export default {
     font-size: 4em;
     font-weight: lighter;
     color: #132448;
-    margin: 80px 0;
+    margin: 160px 0 80px;
 }
 .about-wrap {
     width: 70%;
