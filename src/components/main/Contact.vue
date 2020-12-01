@@ -68,13 +68,25 @@ export default {
     margin: 160px 0 80px;
     color: #132448;
 }
+
+.contact-wrap {
+    width: 60%;
+    margin: 0 auto;
+    flex-flow: column;
+    align-content: center;
+    // .left,
+    // .right {
+    //     width: 50%;
+    // }
+}
+.contact-wrap > div {
+    padding: 0 0 16px 0;
+}
+.contact-wrap > div:last-child {
+    padding: 0;
+}
 .contact-container {
     flex-flow: column;
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    width: 500px;
 }
 .contact-item {
     margin-bottom: 24px;
