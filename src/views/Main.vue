@@ -4,7 +4,7 @@
         <about id="about" class="about" ref="about"></about>
         <skill id="skill" class="skill"></skill>
         <project id="project" class="project"></project>
-        <contact id="contact" class="contact"></contact>
+        <outro id="outro" class="outro"></outro>
 
         <div id="guide"></div>
 
@@ -26,7 +26,7 @@ export default {
         About: () => import('@/components/main/About.vue'),
         Skill: () => import('@/components/main/Skill.vue'),
         Project: () => import('@/components/main/Project.vue'),
-        Contact: () => import('@/components/main/Contact.vue'),
+        Outro: () => import('@/components/main/Outro.vue'),
     },
     computed: {
         ...mapState(['']),

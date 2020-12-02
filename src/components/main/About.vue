@@ -10,8 +10,8 @@
             ABOUT
         </h1>
         <v-row class="about-wrap" no-gutters align="center">
-            <section
-                class="first-side"
+            <div
+                class="profile-img"
                 data-aos="fade-right"
                 data-aos-easing="ease-in-ease"
                 data-aos-delay="200"
@@ -23,47 +23,41 @@
                         alt="프로필"
                     />
                 </v-avatar>
-            </section>
-            <section class="second-side">
-                <div
-                    data-aos="fade-left"
-                    data-aos-easing="ease-in-ease"
-                    data-aos-delay="300"
-                    data-aos-offset="0"
-                    class="about-me"
-                >
-                    <h1>ABOUT ME</h1>
-                    <h4>KIM TAEHOON</h4>
-                    <p>
-                        1994.12.20<br />
-                        010-7115-4729<br />
-                        경기도 김포시 장기동<br />
-                        thkim4729@naver.com
-                    </p>
-                </div>
-                <div
-                    data-aos="fade-left"
-                    data-aos-easing="ease-in-ease"
-                    data-aos-delay="300"
-                    data-aos-offset="0"
-                    class="education"
-                >
-                    <h1>EDUCATION</h1>
-                    <p>2020. 11 인터렉티브 앱 & 웹디자인(웹퍼블리셔, 프론트엔드)과정 수료<br /></p>
-                </div>
-                <div
-                    data-aos="fade-left"
-                    data-aos-easing="ease-in-ease"
-                    data-aos-delay="300"
-                    data-aos-offset="0"
-                    class="education"
-                >
-                    <h1>AWARD</h1>
-                    <p>
-                        2020. 11 인터렉티브 앱 & 웹디자인(웹퍼블리셔, 프론트엔드)과정 우수상<br />
-                    </p>
-                </div>
-            </section>
+            </div>
+            <div
+                class="profile-text"
+                data-aos="fade-left"
+                data-aos-easing="ease-in-ease"
+                data-aos-delay="300"
+                data-aos-offset="0"
+            >
+                <!-- <h1>PROFILE</h1> -->
+                <v-row class="information" justify="center" align="center">
+                    <div class="info-item">
+                        <span class="call-title info-title">CALL</span>
+                        <span class="call-desc info-desc">010 7115 4729</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="mail-title info-title">MAIL</span>
+                        <span class="mail-desc info-desc">thkim4729@naver.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="edu-title info-title">EDUCATION</span
+                        ><span class="edu-desc info-desc">
+                            2020. 11<br />
+                            인터렉티브 앱 & 웹디자인(웹퍼블리셔, 프론트엔드)과정 수료
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        <span class="award-title info-title">AWARD</span>
+                        <span class="award-desc info-desc">
+                            2020. 11 <br />
+                            인터렉티브 앱 & 웹디자인(웹퍼블리셔, 프론트엔드)과정 우수상
+                        </span>
+                    </div>
+                </v-row>
+            </div>
         </v-row>
     </div>
 </template>
@@ -76,6 +70,7 @@ export default {
 
 <style lang="scss" scoped>
 #about {
+    min-width: 320px;
     height: 100vh;
     border: 1px solid transparent;
     background: #eee;
@@ -88,10 +83,9 @@ export default {
     margin: 160px 0 80px;
 }
 .about-wrap {
-    width: 70%;
+    max-width: 1300px;
     margin: 0 auto;
-    section {
-        width: 50%;
+    div {
         h1,
         h2,
         h3,
@@ -101,7 +95,7 @@ export default {
             color: #132448;
         }
         h1 {
-            font-size: 2.25em;
+            font-size: 2em;
             font-weight: bold;
             margin: 0 0 5px 0;
         }
@@ -117,14 +111,22 @@ export default {
             text-decoration: underline;
         }
     }
-    .first-side {
+    .profile-img {
+        width: 500px;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-right: 50px;
     }
-    .second-side {
-        div {
-            padding: 20px;
+    .profile-text {
+        width: 650px;
+    }
+    .information {
+        .info-item {
+            margin-bottom: 24px;
+        }
+        span {
+            color: #3a3a3a;
         }
     }
 }

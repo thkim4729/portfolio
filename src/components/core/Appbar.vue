@@ -32,7 +32,7 @@ export default {
                 { href: '#intro', title: 'Intro' },
                 { href: '#about', title: 'About' },
                 { href: '#project', title: 'Project' },
-                { href: '#contact', title: 'Contact' },
+                { href: '#outro', title: 'Outro' },
             ],
         };
     },
