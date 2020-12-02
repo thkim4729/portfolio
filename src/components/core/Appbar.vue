@@ -1,6 +1,6 @@
 <template>
     <div class="appbar">
-        <v-app-bar app inverted-scroll :scroll-threshold="100" color="#132448" dark height="80">
+        <v-app-bar app inverted-scroll :scroll-threshold="100" color="#eee" height="80">
             <router-link to="/">
                 <v-btn text class="logo" @click="reload">KIM TAEHOON</v-btn>
             </router-link>
@@ -49,6 +49,10 @@ export default {
 <style lang="scss" scoped>
 .appbar {
     z-index: 1000;
+}
+.appbar-title {
+    color: #132448;
+    font-weight: 500;
 }
 .logo {
 }

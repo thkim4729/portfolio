@@ -2,14 +2,13 @@
     <div class="main">
         <intro id="intro" class="intro"></intro>
         <about id="about" class="about" ref="about"></about>
-        <skill id="skill" class="skill"></skill>
         <project id="project" class="project"></project>
         <outro id="outro" class="outro"></outro>
 
         <div id="guide"></div>
 
         <div id="top" data-aos="fade-in">
-            <v-btn small fab dark color="primary" @click="scrollToTop()">
+            <v-btn small fab dark color="#132448" @click="scrollToTop()">
                 <v-icon>mdi-chevron-up</v-icon>
             </v-btn>
         </div>
@@ -24,7 +23,6 @@ export default {
     components: {
         Intro: () => import('@/components/main/Intro.vue'),
         About: () => import('@/components/main/About.vue'),
-        Skill: () => import('@/components/main/Skill.vue'),
         Project: () => import('@/components/main/Project.vue'),
         Outro: () => import('@/components/main/Outro.vue'),
     },

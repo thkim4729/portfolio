@@ -51,9 +51,9 @@ export default {
 
 <style lang="scss" scoped>
 #outro {
-    height: 100vh;
+    // height: 100vh;
     border: 1px solid transparent;
-    padding: 0 20px;
+    padding: 28vh 0;
     // background: url('https://miro.medium.com/max/10494/1*zMQQf10DS-hQIB6p07_kag.jpeg');
     background-position: center;
     background-size: cover;
@@ -63,7 +63,7 @@ export default {
     text-align: center;
     font-size: 2em;
     font-weight: lighter;
-    margin: 160px 0 400px;
+    margin: 0 0 200px;
     color: #132448;
 }
 

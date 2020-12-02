@@ -2,7 +2,7 @@
     <div class="home">
         <core-appbar></core-appbar>
         <core-view></core-view>
-        <core-footer></core-footer>
+        <!-- <core-footer></core-footer> -->
     </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
     components: {
         CoreAppbar: () => import('@/components/core/Appbar.vue'),
         CoreView: () => import('@/components/core/View.vue'),
-        CoreFooter: () => import('@/components/core/Footer.vue'),
+        // CoreFooter: () => import('@/components/core/Footer.vue'),
     },
 };
 </script>

@@ -89,13 +89,4 @@ export default {
         font-size: 24px;
     }
 }
-// #control-btn {
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     .left-btn,
-//     .right-btn {
-//         position: absolute;
-//     }
-// }
 </style>
