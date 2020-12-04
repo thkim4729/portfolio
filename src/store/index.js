@@ -5,37 +5,22 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        drawer: false,
         skills: [
             {
-                id: 0,
-                img: require('@/assets/img/html_wb.png'),
-                value: '60',
-                name: 'HTML',
+                value: 70,
+                title: 'HTML',
             },
             {
-                id: 1,
-                img: require('@/assets/img/css_wb.png'),
-                value: '60',
-                name: 'CSS',
+                value: 60,
+                title: 'CSS',
             },
             {
-                id: 2,
-                img: require('@/assets/img/javascript_wb.png'),
-                value: '50',
-                name: 'Javascript',
+                value: 50,
+                title: 'Javascript',
             },
             {
-                id: 3,
-                img: require('@/assets/img/vue_wb.png'),
-                value: '50',
-                name: 'Vue.js',
-            },
-            {
-                id: 4,
-                img: require('@/assets/img/photoshop_wb.png'),
-                value: '50',
-                name: 'Photoshop',
+                value: 50,
+                title: 'Vue.js',
             },
         ],
         projects: [

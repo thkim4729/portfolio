@@ -1,11 +1,11 @@
 <template>
-    <div class="main">
-        <intro id="intro" class="intro"></intro>
-        <about id="about" class="about" ref="about"></about>
-        <project id="project" class="project"></project>
-        <outro id="outro" class="outro"></outro>
+    <div class="main" id="main">
+        <intro id="intro"></intro>
+        <about id="about" ref="about"></about>
+        <project id="project"></project>
+        <outro id="outro"></outro>
 
-        <div id="guide"></div>
+        <!-- <div id="guide"></div> -->
 
         <div id="top" data-aos="fade-in">
             <v-btn small fab dark color="#132448" @click="scrollToTop()">
@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
 export default {
     name: 'Main',
     components: {
@@ -26,11 +25,16 @@ export default {
         Project: () => import('@/components/main/Project.vue'),
         Outro: () => import('@/components/main/Outro.vue'),
     },
-    computed: {
-        ...mapState(['']),
-    },
+    computed: {},
     data() {
         return {};
+    },
+    mounted() {
+        document.querySelector('#core-view').addEventListener('scroll', (el) => {
+            console.log('scrolltop: ', el.target.scrollTop);
+            let scrollTop = el.target.scrollTop;
+            this.$refs.about.scrollCallbackProgressAnimationStart(scrollTop);
+        });
     },
     methods: {
         scrollToTop() {

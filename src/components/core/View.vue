@@ -1,5 +1,5 @@
 <template>
-    <div class="core-view">
+    <div id="core-view">
         <transition name="component-fade" mode="out-in">
             <router-view></router-view>
         </transition>

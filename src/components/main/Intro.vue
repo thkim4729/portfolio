@@ -1,6 +1,6 @@
 <template>
     <div id="intro">
-        <section class="intro-wrap">
+        <div class="intro-wrap">
             <div data-aos="fade-in" class="text-box">
                 <vue-typer
                     :text="['KIM Taehoon Portfolio']"
@@ -16,7 +16,7 @@
                     caret-animation="phase"
                 ></vue-typer>
             </div>
-        </section>
+        </div>
     </div>
 </template>
 

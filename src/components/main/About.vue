@@ -1,5 +1,5 @@
 <template>
-    <div id="about">
+    <div id="about" ref="about">
         <v-row class="about-wrap" no-gutters justify="center" align="center">
             <div
                 class="profile-left"
@@ -49,7 +49,7 @@
                     </ul>
                 </div>
                 <div class="license">
-                    <p><span>License</span></p>
+                    <p><span>Achivement</span></p>
                     <ul>
                         <li>
                             2020.11<span
@@ -60,20 +60,45 @@
                         <li>2019.08<span>일본어능력시험 JLPT N1</span></li>
                     </ul>
                 </div>
-                <about-skill></about-skill>
+                <div class="skill" ref="skill">
+                    <p><span>Skill</span></p>
+                    <v-row class="skill-list" justify="space-around" align="center" no-gutters>
+                        <div class="skill-item" v-for="(skill, i) in skills" :key="i">
+                            <v-progress-circular
+                                :rotate="-90"
+                                :size="100"
+                                :width="5"
+                                :value="isAnimationStart ? skill.value : 0"
+                                color="#132448"
+                            >
+                                {{ skill.value }}
+                            </v-progress-circular>
+                            <div class="skill-title">{{ skill.title }}</div>
+                        </div>
+                    </v-row>
+                </div>
             </div>
         </v-row>
     </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
     name: 'About',
-    data() {
-        return {};
+    computed: {
+        ...mapState(['skills']),
     },
-    components: {
-        AboutSkill: () => import('@/components/main/AboutSkill.vue'),
+    data() {
+        return { value: 0, timing: 0, isAnimationStart: false };
+    },
+    components: {},
+    methods: {
+        scrollCallbackProgressAnimationStart(scrollTop) {
+            if (this.$refs.about.offsetTop < scrollTop && !this.isAnimationStart) {
+                this.isAnimationStart = true;
+            }
+        },
     },
 };
 </script>
@@ -120,7 +145,6 @@ export default {
     }
     .address {
         flex-flow: column;
-        justify-content: flex-start;
         align-items: flex-start;
         .email {
             color: rgba(0, 0, 0, 0.7);
@@ -170,6 +194,44 @@ export default {
                 }
             }
         }
+    }
+}
+.skill {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 20px;
+    p {
+        margin-bottom: 30px;
+        span {
+            border-bottom: 2px solid #132448;
+        }
+    }
+    ul {
+        li {
+            font-size: 14px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            span {
+                margin-left: 20px;
+                letter-spacing: -1px;
+            }
+        }
+    }
+    .skill-list {
+        width: 100%;
+        .skill-item {
+            // margin-right: 50px;
+            .skill-title {
+                color: black;
+                text-align: center;
+                font-weight: 500;
+            }
+        }
+    }
+    .v-progress-circular__info {
+        color: black;
     }
 }
 </style>

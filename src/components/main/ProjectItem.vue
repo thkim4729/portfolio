@@ -1,6 +1,14 @@
 <template>
     <v-row class="project-item" no-gutters justify="center" align="center">
-        <div class="item-box" v-for="(project, i) in projects" :key="i">
+        <div
+            class="item-box"
+            v-for="(project, i) in projects"
+            :key="i"
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-ease"
+            data-aos-delay="200"
+            data-aos-offset="0"
+        >
             <a href="#">
                 <img :src="project.img" :alt="project.name" />
                 <div class="item-text">
