@@ -1,92 +1,118 @@
 <template>
-    <v-row id="skill" no-gutters justify="center" align="center">
-        <div class="skill-list">
-            <div class="skill-list-inner">
-                <vue-glide
-                    class="slide-wrap"
-                    autoplay
-                    :perView="perView"
-                    :animationDuration="animationDuration"
-                    :gap="gap"
-                    rewind
-                    :rewindDuration="rewindDuration"
-                    bound
-                    :hoverpause="hoverpause"
+    <div class="skill">
+        <p><span>Skill</span></p>
+        <v-row class="skill-list" justify="center" align="center" no-gutters>
+            <div class="skill-item">
+                <v-progress-circular
+                    :rotate="-90"
+                    :size="100"
+                    :width="5"
+                    :value="value"
+                    color="#132448"
                 >
-                    <vue-glide-slide class="slide-item" v-for="(skill, i) in skills" :key="i">
-                        <img class="slide-img" :src="skill.img" :alt="skill.name" />
-                        <p class="slide-text">{{ skill.name }}</p>
-                    </vue-glide-slide>
-                    <!-- <template slot="control" id="control-btn">
-                        <v-btn icon data-glide-dir="<" class="left-btn">
-                            <v-icon>mdi-chevron-left</v-icon>
-                        </v-btn>
-                        <v-btn icon data-glide-dir=">" class="right-btn">
-                            <v-icon>mdi-chevron-right</v-icon>
-                        </v-btn>
-                    </template> -->
-                </vue-glide>
+                    {{ value }}
+                </v-progress-circular>
+                <div class="skill-title">HTML</div>
             </div>
-        </div>
-        <div class="skill-info"></div>
-    </v-row>
+            <div class="skill-item">
+                <v-progress-circular
+                    :rotate="-90"
+                    :size="100"
+                    :width="5"
+                    :value="value"
+                    color="#132448"
+                >
+                    {{ value }}
+                </v-progress-circular>
+                <div class="skill-title">CSS</div>
+            </div>
+            <div class="skill-item">
+                <v-progress-circular
+                    :rotate="-90"
+                    :size="100"
+                    :width="5"
+                    :value="value"
+                    color="#132448"
+                >
+                    {{ value }}
+                </v-progress-circular>
+                <div class="skill-title">Javascript</div>
+            </div>
+            <div class="skill-item">
+                <v-progress-circular
+                    :rotate="-90"
+                    :size="100"
+                    :width="5"
+                    :value="value"
+                    color="#132448"
+                >
+                    {{ value }}
+                </v-progress-circular>
+                <div class="skill-title">Vue.js</div>
+            </div>
+        </v-row>
+    </div>
 </template>
 
 <script>
-import { Glide, GlideSlide } from 'vue-glide-js';
-import { mapState } from 'vuex';
 export default {
     name: 'Skill',
-    components: {
-        [Glide.name]: Glide,
-        [GlideSlide.name]: GlideSlide,
-    },
+    components: {},
     data() {
         return {
-            perView: 2,
-            gap: 50,
-            hoverpause: true,
-            animationDuration: 2500,
-            rewindDuration: 2500,
+            interval: {},
+            value: 0,
         };
     },
-    computed: {
-        ...mapState(['skills']),
+    computed: {},
+    beforeDestroy() {
+        clearInterval(this.interval);
+    },
+    mounted() {
+        this.interval = setInterval(() => {
+            if (this.value === 100) {
+                return (this.value = 0);
+            }
+            this.value += 10;
+        }, 1000);
     },
 };
 </script>
 
 <style lang="scss">
-#skill {
-    background: #eee;
-    height: 50vh;
-    border: 1px solid transparent;
-    flex-flow: row;
-    .skill-list,
-    .skill-info {
-        width: 50%;
-    }
-}
-.skill-list-inner {
-    width: 600px;
-    margin: 0 auto;
-}
-.slide-wrap {
-    position: relative;
-}
-.slide-item {
-    margin: 0 -36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-        width: 100px;
-    }
+.skill {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 20px;
     p {
-        margin-bottom: 0;
-        margin-left: 20px;
-        color: #111;
-        font-size: 24px;
+        margin-bottom: 30px;
+        span {
+            border-bottom: 2px solid #132448;
+        }
+    }
+    ul {
+        li {
+            font-size: 14px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            span {
+                margin-left: 20px;
+                letter-spacing: -1px;
+            }
+        }
+    }
+    .skill-list {
+        .skill-item {
+            margin-right: 50px;
+            .skill-title {
+                color: black;
+                text-align: center;
+            }
+        }
+    }
+    .v-progress-circular__info {
+        color: black;
     }
 }
 </style>

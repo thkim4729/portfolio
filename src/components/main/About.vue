@@ -14,17 +14,19 @@
                     </v-avatar>
                     <div class="status">
                         <p class="name"><span>김태훈</span><span>KIM Taehoon</span></p>
-                        <p class="date">1994.12</p>
+                        <p class="date">1994.12.20</p>
+                        <v-row class="address" justify="flex-start" no-gutters>
+                            <div class="email">
+                                <v-icon class="mr-4">mdi-email-outline</v-icon>thkim4729@naver.com
+                            </div>
+                            <div class="github">
+                                <a href="https://github.com/thkim4729" target="_blank">
+                                    <v-icon class="mr-4">mdi-github</v-icon
+                                    >https://github.com/thkim4729
+                                </a>
+                            </div>
+                        </v-row>
                     </div>
-                </div>
-
-                <div class="email">
-                    <v-icon class="mr-4">mdi-email-outline</v-icon>thkim4729@naver.com
-                </div>
-                <div class="address">
-                    <a href="https://github.com/thkim4729" target="_blank">
-                        <v-icon class="mr-4">mdi-github</v-icon>https://github.com/thkim4729
-                    </a>
                 </div>
             </div>
             <div
@@ -58,19 +60,7 @@
                         <li>2019.08<span>일본어능력시험 JLPT N1</span></li>
                     </ul>
                 </div>
-                <div class="skill">
-                    <p><span>Skill</span></p>
-                    <v-progress-circular
-                        :rotate="-90"
-                        :size="100"
-                        :width="5"
-                        :value="value"
-                        color="#132448"
-                    >
-                        {{ value }}
-                    </v-progress-circular>
-                    <div class="skill-title">HTML</div>
-                </div>
+                <about-skill></about-skill>
             </div>
         </v-row>
     </div>
@@ -80,21 +70,10 @@
 export default {
     name: 'About',
     data() {
-        return {
-            interval: {},
-            value: 0,
-        };
+        return {};
     },
-    beforeDestroy() {
-        clearInterval(this.interval);
-    },
-    mounted() {
-        this.interval = setInterval(() => {
-            if (this.value === 100) {
-                return (this.value = 0);
-            }
-            this.value += 10;
-        }, 1000);
+    components: {
+        AboutSkill: () => import('@/components/main/AboutSkill.vue'),
     },
 };
 </script>
@@ -129,27 +108,36 @@ export default {
         margin-bottom: 16px;
         .name {
             font-weight: bold;
+            margin-bottom: 10px;
             span:first-child:after {
                 content: '│';
                 color: #111;
             }
         }
-    }
-    .email {
-        color: rgba(0, 0, 0, 0.7);
-        margin-bottom: 12px;
-        // margin-left: 120px;
-        text-align: center;
+        .date {
+            margin-bottom: 40px;
+        }
     }
     .address {
-        // margin-left: 120px;
-        text-align: center;
-        a {
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .email {
             color: rgba(0, 0, 0, 0.7);
-            transition: all 0.3s;
+            margin-bottom: 12px;
+            // margin-left: 120px;
+            text-align: center;
         }
-        a:hover {
-            color: #132448;
+        .github {
+            // margin-left: 120px;
+            text-align: center;
+            a {
+                color: rgba(0, 0, 0, 0.7);
+                transition: all 0.3s;
+            }
+            a:hover {
+                color: #132448;
+            }
         }
     }
 }
@@ -160,8 +148,7 @@ export default {
     justify-content: flex-start;
     align-items: flex-start;
     .edu,
-    .license,
-    .skill {
+    .license {
         font-weight: bold;
         margin-bottom: 30px;
         color: black;
@@ -173,22 +160,15 @@ export default {
             }
         }
         ul {
-            letter-spacing: -1px;
             li {
                 font-size: 14px;
                 font-weight: normal;
                 margin-bottom: 10px;
                 span {
                     margin-left: 20px;
+                    letter-spacing: -1px;
                 }
             }
-        }
-        .skill-title {
-            color: black;
-            text-align: center;
-        }
-        .v-progress-circular__info {
-            color: black;
         }
     }
 }
