@@ -91,7 +91,7 @@ export default {
     },
     data() {
         return {
-            value: 0,
+            // value: 0,
             // isAnimationStart: false
         };
     },
