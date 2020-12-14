@@ -4,7 +4,7 @@
             class="item-box"
             v-for="(project, i) in projects"
             :key="i"
-            data-aos="zoom-in"
+            data-aos="flip-left"
             data-aos-easing="ease-in-ease"
             data-aos-delay="200"
             data-aos-offset="0"

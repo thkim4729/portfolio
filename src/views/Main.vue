@@ -30,11 +30,11 @@ export default {
         return {};
     },
     mounted() {
-        document.querySelector('#core-view').addEventListener('scroll', (el) => {
-            console.log('scrolltop: ', el.target.scrollTop);
-            let scrollTop = el.target.scrollTop;
-            this.$refs.about.scrollCallbackProgressAnimationStart(scrollTop);
-        });
+        // document.querySelector('#core-view').addEventListener('scroll', (el) => {
+        //     console.log('scrolltop: ', el.target.scrollTop);
+        //     let scrollTop = el.target.scrollTop;
+        //     this.$refs.about.scrollCallbackProgressAnimationStart(scrollTop);
+        // });
     },
     methods: {
         scrollToTop() {

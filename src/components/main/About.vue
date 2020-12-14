@@ -67,8 +67,8 @@
                             <v-progress-circular
                                 :rotate="-90"
                                 :size="100"
-                                :width="5"
-                                :value="isAnimationStart ? skill.value : 0"
+                                :width="7.5"
+                                :value="skill.value"
                                 color="#132448"
                             >
                                 {{ skill.value }}
@@ -90,15 +90,18 @@ export default {
         ...mapState(['skills']),
     },
     data() {
-        return { value: 0, timing: 0, isAnimationStart: false };
+        return {
+            value: 0,
+            // isAnimationStart: false
+        };
     },
     components: {},
     methods: {
-        scrollCallbackProgressAnimationStart(scrollTop) {
-            if (this.$refs.about.offsetTop < scrollTop && !this.isAnimationStart) {
-                this.isAnimationStart = true;
-            }
-        },
+        // scrollCallbackProgressAnimationStart(scrollTop) {
+        //     if (this.$refs.about.offsetTop < scrollTop && !this.isAnimationStart) {
+        //         this.isAnimationStart = true;
+        //     }
+        // },
     },
 };
 </script>
