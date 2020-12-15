@@ -1,6 +1,8 @@
 <template>
     <v-row class="project-item" no-gutters justify="center" align="center">
-        <div
+        <v-col
+            cols="12"
+            sm="6"
             class="item-box"
             v-for="(project, i) in projects"
             :key="i"
@@ -16,7 +18,7 @@
                     <p>{{ project.info }}</p>
                 </div>
             </a>
-        </div>
+        </v-col>
     </v-row>
 </template>
 

@@ -15,11 +15,11 @@ export default new Vuex.Store({
                 title: 'CSS',
             },
             {
-                value: 50,
+                value: 40,
                 title: 'Javascript',
             },
             {
-                value: 50,
+                value: 40,
                 title: 'Vue.js',
             },
         ],
@@ -29,14 +29,14 @@ export default new Vuex.Store({
                 img: require('@/assets/img/genshin.jpg'),
                 name: '원신 프로젝트',
                 title: 'CLONE CODING',
-                info: '',
+                info: 'Genshin Impact',
             },
             {
                 id: 1,
                 img:
                     'https://c2.peakpx.com/wallpaper/813/374/453/4k-computer-hand-laptop-wallpaper.jpg',
                 name: '',
-                title: 'CLONE CODING',
+                title: 'Preparing Service',
                 info: '',
             },
         ],

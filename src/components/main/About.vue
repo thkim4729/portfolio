@@ -1,15 +1,17 @@
 <template>
     <div id="about" ref="about">
-        <v-row class="about-wrap" no-gutters justify="center" align="center">
-            <div
+        <v-row class="about-wrap" justify="center" align="center">
+            <v-col
                 class="profile-left"
                 data-aos="fade-right"
                 data-aos-easing="ease-in-ease"
                 data-aos-delay="200"
                 data-aos-offset="0"
+                cols="12"
+                sm="6"
             >
                 <div class="profile-basic">
-                    <v-avatar class="profile-img" size="320">
+                    <v-avatar class="profile-img" size="280">
                         <img src="@/assets/img/profile.jpg" alt="프로필" />
                     </v-avatar>
                     <div class="status">
@@ -28,13 +30,15 @@
                         </v-row>
                     </div>
                 </div>
-            </div>
-            <div
+            </v-col>
+            <v-col
                 class="profile-right"
                 data-aos="fade-left"
                 data-aos-easing="ease-in-ease"
                 data-aos-delay="300"
                 data-aos-offset="0"
+                cols="12"
+                sm="6"
             >
                 <div class="edu">
                     <p><span>Education</span></p>
@@ -77,7 +81,7 @@
                         </div>
                     </v-row>
                 </div>
-            </div>
+            </v-col>
         </v-row>
     </div>
 </template>
@@ -119,8 +123,8 @@ export default {
     margin: 0 auto;
 }
 .profile-left {
-    width: 40%;
-    margin-right: 10%;
+    width: 50%;
+    padding: 10px;
     .profile-basic {
         display: flex;
         flex-flow: column;
@@ -170,6 +174,7 @@ export default {
 }
 .profile-right {
     width: 50%;
+    padding: 10px;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -226,6 +231,7 @@ export default {
         width: 100%;
         .skill-item {
             // margin-right: 50px;
+            padding: 10px;
             .skill-title {
                 color: black;
                 text-align: center;

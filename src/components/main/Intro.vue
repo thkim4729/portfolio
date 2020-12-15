@@ -61,7 +61,8 @@ div {
     left: 50%;
     transform: translate(-50%, -50%) !important;
     max-width: 100%;
-    min-width: 450px;
+    min-width: 320px;
+    padding: 0 10px;
     display: flex;
     justify-content: center;
     flex-flow: column;
