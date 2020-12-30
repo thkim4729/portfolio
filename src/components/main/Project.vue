@@ -13,7 +13,7 @@ export default {
 
 <style lang="scss" scoped>
 #project {
-    padding: 20vh 0 0;
+    padding: 10vh 0 0;
     border: 1px solid transparent;
     background: #eee;
     overflow: hidden;

@@ -22,6 +22,13 @@ export default {
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'NEXONFootballGothicLA1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXONFootballGothicLA1.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -34,12 +41,13 @@ li {
 * {
     margin: 0;
     padding: 0;
-    font-family: 'NEXON Lv1 Gothic Light', sans-serif;
+    // font-family: 'NEXON Lv1 Gothic Light', sans-serif;
+    font-family: 'NEXONFootballGothicLA1';
 }
 
 ::-webkit-scrollbar {
     /* 스크롤바 전체 영역 */
-    width: 6px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track {
     /* 스크롤이 움직이는 영역  */

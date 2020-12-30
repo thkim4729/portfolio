@@ -57,10 +57,13 @@ export default {
             font-size: 36px;
             font-weight: 500;
             text-align: center;
+            color: #fff;
         }
         p {
+            font-size: 20px;
             margin-bottom: 0;
             text-align: center;
+            color: #fff;
         }
     }
 }

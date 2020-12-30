@@ -12,12 +12,18 @@
             >
                 <div class="profile-basic">
                     <v-avatar class="profile-img" size="280">
-                        <img src="@/assets/img/profile.jpg" alt="프로필" />
+                        <img
+                            src="https://avatars2.githubusercontent.com/u/71238632?s=460&u=b5324c2efbe20a1dc8eedee4ef39a7fbfe58d383&v=4"
+                            alt="프로필"
+                        />
                     </v-avatar>
                     <div class="status">
                         <p class="name"><span>김태훈</span><span>KIM Taehoon</span></p>
                         <p class="date">1994.12.20</p>
                         <v-row class="address" justify="flex-start" no-gutters>
+                            <div class="phone">
+                                <v-icon class="mr-4">mdi-phone</v-icon>010-7115-4729
+                            </div>
                             <div class="email">
                                 <v-icon class="mr-4">mdi-email-outline</v-icon>thkim4729@naver.com
                             </div>
@@ -113,7 +119,7 @@ export default {
 <style lang="scss">
 #about {
     // height: 100vh;
-    padding: 24vh 0 0;
+    padding: 20vh 0 0;
     border: 1px solid transparent;
     background: #eee;
 }
@@ -153,6 +159,12 @@ export default {
     .address {
         flex-flow: column;
         align-items: flex-start;
+        .phone {
+            color: rgba(0, 0, 0, 0.7);
+            margin-bottom: 12px;
+            // margin-left: 120px;
+            text-align: center;
+        }
         .email {
             color: rgba(0, 0, 0, 0.7);
             margin-bottom: 12px;
@@ -193,12 +205,12 @@ export default {
         }
         ul {
             li {
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: normal;
                 margin-bottom: 10px;
                 span {
                     margin-left: 20px;
-                    letter-spacing: -1px;
+                    letter-spacing: -0.5px;
                 }
             }
         }
@@ -214,17 +226,6 @@ export default {
         margin-bottom: 30px;
         span {
             border-bottom: 2px solid #132448;
-        }
-    }
-    ul {
-        li {
-            font-size: 14px;
-            font-weight: normal;
-            margin-bottom: 10px;
-            span {
-                margin-left: 20px;
-                letter-spacing: -1px;
-            }
         }
     }
     .skill-list {

@@ -53,13 +53,16 @@ export default {
 .appbar-title {
     color: #132448;
     font-weight: 500;
+    font-size: 16px;
 }
 .logo {
+    font-size: 16px;
 }
 .email {
     padding: 0 16px;
     letter-spacing: 0.0892857143em;
 }
 .github {
+    font-size: 16px;
 }
 </style>
