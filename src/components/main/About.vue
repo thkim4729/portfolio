@@ -12,10 +12,7 @@
             >
                 <div class="profile-basic">
                     <v-avatar class="profile-img" size="280">
-                        <img
-                            src="https://avatars2.githubusercontent.com/u/71238632?s=460&u=b5324c2efbe20a1dc8eedee4ef39a7fbfe58d383&v=4"
-                            alt="프로필"
-                        />
+                        <img src="@/assets/img/profile.png" alt="프로필" />
                     </v-avatar>
                     <div class="status">
                         <p class="name"><span>김태훈</span><span>KIM Taehoon</span></p>

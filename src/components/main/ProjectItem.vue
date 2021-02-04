@@ -11,7 +11,7 @@
             data-aos-delay="200"
             data-aos-offset="0"
         >
-            <a href="#">
+            <a :href="project.link" target="_blank">
                 <img :src="project.img" :alt="project.name" />
                 <div class="item-text">
                     <h2>{{ project.title }}</h2>
@@ -41,7 +41,7 @@ export default {
     img {
         width: 100%;
         height: 500px;
-        filter: brightness(70%);
+        filter: brightness(60%);
         transition: all 0.5s;
         object-fit: cover;
     }
@@ -60,7 +60,7 @@ export default {
             color: #fff;
         }
         p {
-            font-size: 20px;
+            font-size: 24px;
             margin-bottom: 0;
             text-align: center;
             color: #fff;
