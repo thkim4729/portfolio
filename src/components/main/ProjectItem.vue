@@ -16,6 +16,7 @@
                 <div class="item-text">
                     <h2>{{ project.title }}</h2>
                     <p>{{ project.info }}</p>
+                    <p>{{ project.desc }}</p>
                 </div>
             </a>
         </v-col>
@@ -64,6 +65,9 @@ export default {
             margin-bottom: 0;
             text-align: center;
             color: #fff;
+        }
+        p:last-child {
+            font-size: 16px;
         }
     }
 }
