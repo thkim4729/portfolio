@@ -30,6 +30,7 @@ export default new Vuex.Store({
                 name: '원신 프로젝트',
                 title: 'CLONE CODING',
                 info: 'Genshin Impact',
+                desc: 'only desktop',
                 link: 'https://thkim4729.github.io/genshin_vue/',
             },
             {
@@ -38,6 +39,7 @@ export default new Vuex.Store({
                 name: '켈로그 프로젝트',
                 title: 'CLONE CODING',
                 info: 'Kellogg',
+                desc: 'only desktop',
                 link: 'https://thkim4729.github.io/kellogg-s/',
             },
         ],
