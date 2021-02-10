@@ -31,6 +31,7 @@ export default new Vuex.Store({
                 title: 'CLONE CODING',
                 info: 'Genshin Impact',
                 desc: 'only desktop',
+                tool: 'Vue.js',
                 link: 'https://thkim4729.github.io/genshin_vue/',
             },
             {
@@ -40,6 +41,7 @@ export default new Vuex.Store({
                 title: 'CLONE CODING',
                 info: 'Kellogg',
                 desc: 'only desktop',
+                tool: 'jQuery',
                 link: 'https://thkim4729.github.io/kellogg-s/',
             },
         ],

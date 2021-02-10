@@ -14,7 +14,9 @@
             <a :href="project.link" target="_blank">
                 <img :src="project.img" :alt="project.name" />
                 <div class="item-text">
-                    <h2>{{ project.title }}</h2>
+                    <h2>
+                        {{ project.title }} <span>with {{ project.tool }}</span>
+                    </h2>
                     <p>{{ project.info }}</p>
                     <p>{{ project.desc }}</p>
                 </div>
@@ -55,10 +57,17 @@ export default {
         left: 50%;
         transform: translate(-50%, -50%);
         h2 {
-            font-size: 36px;
+            font-size: 40px;
             font-weight: 500;
             text-align: center;
             color: #fff;
+            display: flex;
+            flex-flow: column;
+            line-height: 40px;
+            span {
+                font-size: 20px;
+                margin: -10px 0 0;
+            }
         }
         p {
             font-size: 24px;
