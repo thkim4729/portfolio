@@ -50,6 +50,11 @@ export default {
 .appbar {
     z-index: 1000;
 }
+@media screen and (max-width: 768px) {
+    .appbar-btn {
+        display: none;
+    }
+}
 .appbar-title {
     color: #132448;
     font-weight: 500;
