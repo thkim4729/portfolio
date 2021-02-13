@@ -11,15 +11,15 @@ export default new Vuex.Store({
                 title: 'HTML',
             },
             {
-                value: 60,
+                value: 70,
                 title: 'CSS',
             },
             {
-                value: 50,
+                value: 60,
                 title: 'Javascript',
             },
             {
-                value: 50,
+                value: 60,
                 title: 'Vue.js',
             },
         ],
