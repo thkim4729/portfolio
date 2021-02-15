@@ -7,11 +7,11 @@ export default new Vuex.Store({
     state: {
         skills: [
             {
-                value: 70,
+                value: 75,
                 title: 'HTML',
             },
             {
-                value: 70,
+                value: 75,
                 title: 'CSS',
             },
             {
