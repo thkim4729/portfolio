@@ -50,11 +50,6 @@ export default {
 .appbar {
     z-index: 1000;
 }
-@media screen and (max-width: 768px) {
-    .appbar-btn {
-        display: none;
-    }
-}
 .appbar-title {
     color: #132448;
     font-weight: 500;
@@ -69,5 +64,16 @@ export default {
 }
 .github {
     font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+    .appbar-btn {
+        display: none;
+    }
+    .logo {
+        font-size: 12px;
+    }
+    .github {
+        font-size: 12px;
+    }
 }
 </style>

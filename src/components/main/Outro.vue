@@ -73,4 +73,11 @@ export default {
 .info-item:last-child {
     margin-bottom: 0;
 }
+@media screen and (max-width: 768px) {
+    .info-item {
+        h3 {
+            font-size: 30px;
+        }
+    }
+}
 </style>
