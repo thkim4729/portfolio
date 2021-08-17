@@ -49,11 +49,11 @@ li {
     /* 스크롤바 전체 영역 */
     width: 10px;
 }
-::-webkit-scrollbar-track {
-    /* 스크롤이 움직이는 영역  */
-    background-color: #eee;
-    border-radius: 30px;
-}
+// ::-webkit-scrollbar-track {
+//     /* 스크롤이 움직이는 영역  */
+//     background-color: #eee;
+//     border-radius: 30px;
+// }
 ::-webkit-scrollbar-thumb {
     /*  스크롤  */
     background-color: #132448;
