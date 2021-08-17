@@ -45,28 +45,28 @@ li {
     font-family: 'NEXONFootballGothicLA1';
 }
 
-::-webkit-scrollbar {
-    /* 스크롤바 전체 영역 */
-    width: 10px;
-}
+// ::-webkit-scrollbar {
+//     /* 스크롤바 전체 영역 */
+//     width: 10px;
+// }
 // ::-webkit-scrollbar-track {
 //     /* 스크롤이 움직이는 영역  */
 //     background-color: #eee;
 //     border-radius: 30px;
 // }
-::-webkit-scrollbar-thumb {
-    /*  스크롤  */
-    background-color: #132448;
-    border-radius: 30px;
-}
-::-webkit-scrollbar-button:start:decrement,
-::-webkit-scrollbar-button:end:increment {
-    /*  스크롤의 화살표가 포함된 영역   */
-    // display: block;
-    // height: 10px;
-    // background-color: gray;
-}
-::-webkit-scrollbar-corner {
-    /*  상하+좌우 스크롤이 만나는 공간   */
-}
+// ::-webkit-scrollbar-thumb {
+//     /*  스크롤  */
+//     background-color: #132448;
+//     border-radius: 30px;
+// }
+// ::-webkit-scrollbar-button:start:decrement,
+// ::-webkit-scrollbar-button:end:increment {
+//     /*  스크롤의 화살표가 포함된 영역   */
+//     // display: block;
+//     // height: 10px;
+//     // background-color: gray;
+// }
+// ::-webkit-scrollbar-corner {
+//     /*  상하+좌우 스크롤이 만나는 공간   */
+// }
 </style>
