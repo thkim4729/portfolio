@@ -100,6 +100,7 @@ export default {
         return {
             // value: 0,
             // isAnimationStart: false
+            //
         };
     },
     components: {},
