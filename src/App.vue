@@ -14,6 +14,8 @@ export default {
 };
 </script>
 <style lang="scss">
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css);
+
 // @import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
 @font-face {
     font-family: 'NEXON Lv1 Gothic OTF Light';

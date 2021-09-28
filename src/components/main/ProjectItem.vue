@@ -1,29 +1,24 @@
 <template>
     <v-row class="project-item" no-gutters justify="center" align="center">
-        <!-- <v-col
-            cols="12"
-            sm="6"
-            class="item-box"
-            v-for="(project, i) in projects"
-            :key="i"
-            data-aos="flip-left"
-            data-aos-easing="ease-in-ease"
-            data-aos-delay="200"
-            data-aos-offset="0"
-        > -->
         <v-col cols="12" md="6" class="item-box">
             <hooper class="hooper" infiniteScroll="true" wheelControl="false">
                 <slide class="slide" v-for="(project, i) in projects" :key="i">
-                    <a :href="project.link" target="_blank">
-                        <img :src="project.img" :alt="project.name" />
-                        <div class="item-text">
-                            <h2>
-                                {{ project.title }} <span>with {{ project.tool }}</span>
-                            </h2>
-                            <p>{{ project.info }}</p>
-                            <p>{{ project.desc }}</p>
-                        </div>
-                    </a>
+                    <img :src="project.img" :alt="project.name" />
+                    <div class="item-text">
+                        <h2>
+                            {{ project.title }} <span>with {{ project.tool }}</span>
+                        </h2>
+                        <p>{{ project.info }}</p>
+                        <p>{{ project.desc }}</p>
+                        <a :href="project.link" target="_blank">
+                            <v-btn class="ma-2" color="primary" dark elevation="0">
+                                Link
+                                <v-icon dark right>
+                                    mdi-open-in-new
+                                </v-icon>
+                            </v-btn>
+                        </a>
+                    </div>
                 </slide>
                 <hooper-navigation slot="hooper-addons"></hooper-navigation>
                 <hooper-pagination slot="hooper-addons"></hooper-pagination>
@@ -59,6 +54,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.hooper-navigation .icon {
+    background-color: white;
+    color: white;
+}
 .hooper {
     height: 500px;
     .slide {
@@ -71,14 +70,15 @@ export default {
             transition: all 0.5s;
             object-fit: cover;
         }
-        a:hover img {
-            transform: scale(1.1);
-        }
         .item-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
             h2 {
                 font-size: 40px;
                 font-weight: 500;
@@ -102,6 +102,9 @@ export default {
                 font-size: 16px;
             }
         }
+    }
+    .slide:hover img {
+        transform: scale(1.1);
     }
 }
 </style>
