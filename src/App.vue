@@ -32,6 +32,10 @@ export default {
 html {
     scroll-behavior: smooth;
 }
+.v-application ul,
+.v-application ol {
+    padding: 0px !important;
+}
 a,
 ul,
 li {
