@@ -10,14 +10,14 @@
                         </h2>
                         <p>{{ project.info }}</p>
                         <p>{{ project.desc }}</p>
-                        <a :href="project.link" target="_blank">
-                            <v-btn class="ma-2" color="primary" dark elevation="0">
-                                Link
-                                <v-icon dark right>
-                                    mdi-open-in-new
+                        <v-btn class="button" elevation="0" color="#132448">
+                            <a :href="project.link" target="_blank">
+                                Learn More
+                                <v-icon class="icon" dense right>
+                                    mdi-arrow-right
                                 </v-icon>
-                            </v-btn>
-                        </a>
+                            </a>
+                        </v-btn>
                     </div>
                 </slide>
                 <hooper-navigation slot="hooper-addons"></hooper-navigation>
@@ -47,6 +47,7 @@ export default {
         HooperPagination,
         HooperNavigation,
     },
+    methods: {},
     data() {
         return {};
     },
@@ -101,10 +102,22 @@ export default {
             p:last-child {
                 font-size: 16px;
             }
+            .button {
+                margin: 8px 0 0 0;
+            }
         }
     }
     .slide:hover img {
         transform: scale(1.1);
     }
+    a {
+        font-size: 16px;
+        color: #fff;
+        // margin: 10px 0 0 0;
+        display: flex;
+    }
+}
+.v-icon--right {
+    margin: 2px 0 0 5px;
 }
 </style>
