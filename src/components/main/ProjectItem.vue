@@ -1,7 +1,7 @@
 <template>
     <v-row class="project-item" no-gutters justify="center" align="center">
         <v-col cols="12" md="6" class="item-box">
-            <hooper class="hooper" infiniteScroll="true" wheelControl="false">
+            <hooper class="hooper" :settings="hooperSettings">
                 <slide class="slide" v-for="(project, i) in projects" :key="i">
                     <img :src="project.img" :alt="project.name" />
                     <div class="item-text">
@@ -49,7 +49,12 @@ export default {
     },
     methods: {},
     data() {
-        return {};
+        return {
+            hooperSettings: {
+                wheelControl: false,
+                infiniteScroll: true,
+            },
+        };
     },
 };
 </script>
