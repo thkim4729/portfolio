@@ -9,18 +9,26 @@ export default new Vuex.Store({
             {
                 value: 75,
                 title: 'HTML',
+                img: require('@/assets/img/html_icon.png'),
+                name: 'html',
             },
             {
                 value: 75,
                 title: 'CSS',
+                img: require('@/assets/img/css_icon.png'),
+                name: 'css',
             },
             {
                 value: 60,
                 title: 'Javascript',
+                img: require('@/assets/img/js_icon.png'),
+                name: 'javascript',
             },
             {
                 value: 60,
                 title: 'Vue.js',
+                img: require('@/assets/img/vue_icon.png'),
+                name: 'vue.js',
             },
         ],
         projects: [

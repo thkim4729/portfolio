@@ -71,7 +71,7 @@
                     <p><span>Skill</span></p>
                     <v-row class="skill-list" justify="space-around" align="center" no-gutters>
                         <div class="skill-item" v-for="(skill, i) in skills" :key="i">
-                            <v-progress-circular
+                            <!-- <v-progress-circular
                                 :rotate="-90"
                                 :size="100"
                                 :width="7.5"
@@ -79,7 +79,8 @@
                                 color="#132448"
                             >
                                 {{ skill.value }}
-                            </v-progress-circular>
+                            </v-progress-circular> -->
+                            <img class="skill-img" :src="skill.img" :alt="skill.name" />
                             <div class="skill-title">{{ skill.title }}</div>
                         </div>
                     </v-row>
@@ -230,7 +231,14 @@ export default {
         width: 100%;
         .skill-item {
             // margin-right: 50px;
-            padding: 10px;
+            padding: 8px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            .skill-img {
+                width: 64px;
+                margin-bottom: 10px;
+            }
             .skill-title {
                 color: black;
                 text-align: center;
@@ -240,6 +248,10 @@ export default {
     }
     .v-progress-circular__info {
         color: black;
+    }
+}
+@media (max-width: 768px) {
+    .skill-img {
     }
 }
 </style>
