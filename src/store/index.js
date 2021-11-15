@@ -48,7 +48,7 @@ export default new Vuex.Store({
                 name: '카카오비즈니스 프로젝트',
                 title: 'CLONE CODING',
                 info: 'Kakao Business',
-                desc: 'Desktop % Mobile',
+                desc: 'Desktop & Mobile',
                 tool: 'Vue.js',
                 link: 'https://thkim4729.github.io/kakao_business_vue/',
             },
