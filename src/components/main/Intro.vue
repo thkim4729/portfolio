@@ -5,7 +5,7 @@
                 <div class="animated-title">
                     <div class="text-top">
                         <div>
-                            <span>KIM</span>
+                            <span>KIMkim</span>
                             <span>Taehoon</span>
                         </div>
                     </div>
