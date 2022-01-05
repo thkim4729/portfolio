@@ -1,5 +1,6 @@
 <template>
     <div id="project">
+        <h1>PROJECT</h1>
         <project-item></project-item>
     </div>
 </template>
@@ -17,5 +18,10 @@ export default {
     border: 1px solid transparent;
     background: #eee;
     overflow: hidden;
+    h1 {
+        text-align: center;
+        margin: 5vh 0;
+        color: #132448;
+    }
 }
 </style>

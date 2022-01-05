@@ -3,6 +3,7 @@
         <intro id="intro"></intro>
         <about id="about" ref="about"></about>
         <project id="project"></project>
+        <design id="design"></design>
         <outro id="outro"></outro>
 
         <!-- <div id="guide"></div> -->
@@ -23,6 +24,7 @@ export default {
         Intro: () => import('@/components/main/Intro.vue'),
         About: () => import('@/components/main/About.vue'),
         Project: () => import('@/components/main/Project.vue'),
+        Design: () => import('@/components/main/Design.vue'),
         Outro: () => import('@/components/main/Outro.vue'),
     },
     computed: {},
