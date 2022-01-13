@@ -1,15 +1,7 @@
 <template>
     <div id="about" ref="about">
         <v-row class="about-wrap" justify="center" align="center">
-            <v-col
-                class="profile-left"
-                data-aos="fade-right"
-                data-aos-easing="ease-in-ease"
-                data-aos-delay="200"
-                data-aos-offset="0"
-                cols="12"
-                sm="6"
-            >
+            <v-col class="profile-left" cols="12" sm="6">
                 <div class="profile-basic">
                     <v-avatar class="profile-img" size="280">
                         <img src="@/assets/img/profile.png" alt="프로필" />
@@ -34,15 +26,7 @@
                     </div>
                 </div>
             </v-col>
-            <v-col
-                class="profile-right"
-                data-aos="fade-left"
-                data-aos-easing="ease-in-ease"
-                data-aos-delay="300"
-                data-aos-offset="0"
-                cols="12"
-                sm="6"
-            >
+            <v-col class="profile-right" cols="12" sm="6">
                 <div class="edu">
                     <p><span>Education</span></p>
                     <ul>
